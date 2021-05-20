@@ -1,0 +1,22 @@
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+/* Tablet Styles */
+
+@media only screen and (min-width: 444px) and (max-width: 1019px) {}
+
+/* Desktop Styles */
+
+@media only screen and (min-width: 1020px) {}
