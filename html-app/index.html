@@ -5,6 +5,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Cody Uhi</title>
     <link rel="stylesheet" href="./style/home-style.css">
     <script type="text/javascript" src="./js/scripts.js"></script>
@@ -236,9 +237,12 @@
             </div>
             <div id="experience-container" class="flex-column section center">
                 <div id="experience" class="flex-column">
-                    <h3>Experience</h3>
-                    <p><a href="#">Resume</a> <a href="#">Download</a></p>
-                    <h4>Timeline</h4>
+                    <div id="experience-header" class="flex-column center">
+                        <h3>Experience</h3>
+                        <p><a href="#"><button class="resume-buttons">View Resume</button></a> <a href="#"><button
+                                    class="resume-buttons">Download Resume</button></a></p>
+                        <h4>Timeline</h4>
+                    </div>
                     <div class="experience-cell">
                         <h5 class="experience-time">February 2021 - Present</h5>
                         <p class="experience-title">Site Reliability Engineer</p>
@@ -321,16 +325,79 @@
             </div>
             <div id="education-container" class="flex-column section center">
                 <div id="education" class="flex-column">
-                    <h3>Education</h3>
-                    <h4>Brigham Young University - Provo, UT</h4>
-                    <h5>BS Information Technology</h5>
-                    <h5>Computer Science Minor</h5>
-                    <h5>Cumulative GPA: 3.34</h5>
-                    <ul>
-                        <li>Member - BYU Cybersecurity Student Association</li>
-                        <li>Member - BYU Dev Club</li>
-                        <li>Vice President - BYU IT Student Association</li>
-                    </ul>
+                    <div id="education-header" class="flex-column center">
+                        <h3>Education</h3>
+                        <h4>Brigham Young University - Provo, UT</h4>
+                        <h5>BS Information Technology</h5>
+                        <h5>Computer Science Minor</h5>
+                        <h5>Cumulative GPA: 3.34</h5>
+                        <ul>
+                            <li>Member - BYU Cybersecurity Student Association</li>
+                            <li>Member - BYU Dev Club</li>
+                            <li>Vice President - BYU IT Student Association</li>
+                        </ul>
+                    </div>
+                    <div id="courses-container" class="center">
+                        <div id="stem-courses" class="flex-column center">
+                            <button class="expand-buttons" onclick="toggleCourses('stem')">STEM Courses</button>
+                            <div id="stem-list" class="half-section hidden">
+                                <ul class="course-list">
+                                    <li class="course">MFG130: Modern Engineering</li>
+                                    <li class="course">MILS001: Network Administration</li>
+                                    <li class="course">MATH110: College Algebra</li>
+                                    <li class="course">MATH112: Calculus 1</li>
+                                    <li class="course">MATH116: Essentials of Calculus</li>
+                                    <li class="course">STAT121: Principles of Statistics</li>
+                                    <li class="course">PHSCS105: General Physics</li>
+                                    <li class="course">PHSCS127: Descriptive Astronomy</li>
+                                    <li class="course">GEOL109: Geology of Planets</li>
+                                    <li class="course">ECON110: Economics Principles & Problems</li>
+                                    <li class="course">TECH112: Innovation</li>
+                                    <li class="course">Preview of Nursing</li>
+                                    <li class="course">ENGL316: Technical Communication</li>
+                                    <li class="course">CS142: Intro to Computer Programming</li>
+                                    <li class="course">CS224: Computer Systems</li>
+                                    <li class="course">CS235: Data Structures</li>
+                                    <li class="course">CS236: Discrete Structures</li>
+                                    <li class="course">CS240: Advanced Programming Concepts</li>
+                                    <li class="course">CS260: Web Programming</li>
+                                    <li class="course">IT101: Cornerstone - Information Technology</li>
+                                    <li class="course">IT210: Fundamentals of Web-Based IT</li>
+                                    <li class="course">IT&C231: IT Ethics & Global Leadership</li>
+                                    <li class="course">IT252: Computer Architecture & Organization</li>
+                                    <li class="course">IT&C255: Human-Computer Interaction</li>
+                                    <li class="course">IT291R: Professional Seminar</li>
+                                    <li class="course">IT&C327: Digital Communications</li>
+                                    <li class="course">IT&C344: Operating Systems</li>
+                                    <li class="course">IT&C347: Computer Networks</li>
+                                    <li class="course">IT&C350: Database Principles & Applications</li>
+                                    <li class="course">IT&C366: Information Assurance & Security</li>
+                                    <li class="course">IT&C410: Advanced Web Technologies</li>
+                                    <li class="course">IT&C446/447: Senior Project/Capstone</li>
+                                    <li class="course">IT&C492R: Mobile Development</li>
+                                    <li class="course">IT&C555: Advanced Human-Computer Interaction</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="non-stem-courses" class="flex-column center">
+                            <button class="expand-buttons" onclick="toggleCourses('non-stem')">Non-STEM Courses</button>
+                            <div id="non-stem-list" class="half-section hidden">
+                                <ul class="course-list">
+                                    <li class="course">DANCE378R: Folk Dance Performance</li>
+                                    <li class="course">MUSIC312R: Men's Chorus</li>
+                                    <li class="course">PSYCH111: Psychological Science</li>
+                                    <li class="course">WRTG150: Honors Writing & Rhetoric</li>
+                                    <li class="course">HIST220: US Through 1877</li>
+                                    <li class="course">STAC139: Jogging</li>
+                                    <li class="course">STAC189: Volleyball</li>
+                                    <li class="course">FLANG330R: Advanced Language & Culture - Tagalog</li>
+                                    <li class="course">CMLIT202: Civilization - Literature 2</li>
+                                    <li class="course">ARTHC201: World Civilization to 1500</li>
+                                    <li class="course">RELC351: World Religions</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="about-container" class="flex-column section center">

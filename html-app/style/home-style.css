@@ -2,12 +2,17 @@ body {
     margin: 0;
 }
 
+h3 {
+    max-width: 80vw;
+    text-align: center;
+}
+
 .section {
     min-height: 500px;
     border: 1px solid black;
 }
 
-.flex-column {
+.flex-column, #courses-container {
     display: flex;
     flex-direction: column;
 }
@@ -30,17 +35,54 @@ body {
     padding: 15px;
     margin: 15px;
     border: 1px solid black;
-    max-width: 25vw;
+    max-width: 90vw;
 }
 
 .project-cell {
     padding: 15px;
 }
 
+.resume-buttons {
+    text-decoration: none;
+}
+
+.resume-buttons, .expand-buttons {
+    margin: 15px;
+    padding: 15px;
+}
+
+.resume-buttons, .expand-buttons:hover {
+    cursor: pointer;
+}
+
+.half-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
 /* Tablet Styles */
 
-@media only screen and (min-width: 444px) and (max-width: 1019px) {}
+@media only screen and (min-width: 444px) and (max-width: 1019px) {
+    .project-cell-container {
+        max-width: 25vw;
+    }
+    #courses-container {
+        flex-direction: row;
+    }
+}
 
 /* Desktop Styles */
 
-@media only screen and (min-width: 1020px) {}
+@media only screen and (min-width: 1020px) {
+    .project-cell-container {
+        max-width: 25vw;
+    }
+    #courses-container {
+        flex-direction: row;
+    }
+}
