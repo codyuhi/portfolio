@@ -1,10 +1,44 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+:root {
+    --lightback: #cfdbd5;
+    --lighttext: #e8eddf;
+    --linktext: #f5cb5c;
+    --darktext: #242423;
+    --darkback: #333533;
+}
+
 body {
     margin: 0;
+}
+
+h1 {
+    font-size: 65px;
+    margin: 25px;
 }
 
 h3 {
     max-width: 80vw;
     text-align: center;
+}
+
+.navbar-text, .bx {
+    color: var(--lighttext) !important;
+}
+
+.navbar-text:hover {
+    text-decoration: none;
+}
+
+.navbar-background {
+    background-color: var(--darkback);
+    transition: background-color .25s linear;
 }
 
 .section {
@@ -29,6 +63,29 @@ h3 {
 
 .wrap {
     flex-wrap: wrap;
+}
+
+#intro-container {
+    background-color: var(--darkback);
+    background-size: cover;
+    background-position: 0px;
+    background-image: linear-gradient(90deg, #33353388 0%, #33353344 58.88%, #00000000 100%), url('../img/intro-background.jpg');
+    animation-name: backgroundscroller;
+    animation-duration: 300s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    color: var(--lighttext);
+    height: 100vh;
+}
+
+@keyframes backgroundscroller {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 500% 500%, 400% 400%, 300% 300%, 200% 200%, 100% 100%;
+    }
 }
 
 .project-cell-container {
@@ -73,6 +130,12 @@ h3 {
     }
     #courses-container {
         flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1450px) {
+    #intro-container {
+        animation-duration: 150s;
     }
 }
 
