@@ -79,6 +79,29 @@ h3 {
     height: 100vh;
 }
 
+#about-container {
+    /* background-color: var(--lighttext); */
+    color: var(--darktext);
+    display: flex;
+    flex-direction: column;
+}
+
+#about-pic {
+    flex: 1;
+}
+
+.tile-image {
+    width: 100%;
+    height: auto;
+}
+
+#about {
+    flex: 1;
+    max-width: 90%;
+    text-align: center;
+    margin: 50px;
+}
+
 @keyframes backgroundscroller {
     from {
         background-position: 0% 0%;
@@ -131,6 +154,9 @@ h3 {
     #courses-container {
         flex-direction: row;
     }
+    #about {
+        max-width: 80%;
+    }
 }
 
 @media only screen and (min-width: 800px) and (max-width: 1450px) {
@@ -147,5 +173,11 @@ h3 {
     }
     #courses-container {
         flex-direction: row;
+    }
+    #about-container {
+        flex-direction: row;
+    }
+    #about {
+        max-width: 80%;
     }
 }

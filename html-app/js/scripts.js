@@ -7,15 +7,22 @@ function toggleCourses(type) {
     }
 }
 
+function closeNavbar() {
+    document.getElementById('collapsible-nav').click();
+}
+
+function changeNavbarTransparency () {
+    var scroll = $(window).scrollTop();
+    var os = $('#intro').offset().top;
+    var ht = $('#intro').height();
+    if (scroll > os + ht) {
+        $('#page-navbar').addClass('navbar-background');
+    } else {
+        $('#page-navbar').removeClass('navbar-background');
+    }
+}
+
 $(function () {
-    $(window).scroll(function () {
-        var scroll = $(window).scrollTop();
-        var os = $('#intro').offset().top;
-        var ht = $('#intro').height();
-        if (scroll > os + ht) {
-            $('#page-navbar').addClass('navbar-background');
-        } else {
-            $('#page-navbar').removeClass('navbar-background');
-        }
-    });
+    $(document).ready(changeNavbarTransparency);
+    $(window).scroll(changeNavbarTransparency);
 });
