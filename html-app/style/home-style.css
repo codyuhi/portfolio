@@ -8,10 +8,12 @@ html {
 
 :root {
     --lightback: #cfdbd5;
-    --lighttext: #e8eddf;
+    /* --lighttext: #e8eddf; */
+    --lighttext: #FDFFF7;
     --linktext: #f5cb5c;
     --darktext: #242423;
     --darkback: #333533;
+    --blueback: #4FB286;
 }
 
 body {
@@ -28,6 +30,10 @@ h3 {
     text-align: center;
 }
 
+#page-navbar {
+    transition: all .25s linear;
+}
+
 .navbar-text, .bx {
     color: var(--lighttext) !important;
 }
@@ -37,13 +43,12 @@ h3 {
 }
 
 .navbar-background {
-    background-color: var(--darkback);
-    transition: background-color .25s linear;
+    background-color: var(--blueback);
+    transition: all .25s linear;
 }
 
 .section {
     min-height: 500px;
-    border: 1px solid black;
 }
 
 .flex-column, #courses-container {
@@ -102,6 +107,16 @@ h3 {
     margin: 50px;
 }
 
+#projects-container {
+    background-color: var(--darkback);
+    color: var(--lighttext);
+    padding: 50px 0 50px 0;
+}
+
+#projects {
+    padding: 50px 0 50px 0;
+}
+
 @keyframes backgroundscroller {
     from {
         background-position: 0% 0%;
@@ -114,12 +129,32 @@ h3 {
 .project-cell-container {
     padding: 15px;
     margin: 15px;
-    border: 1px solid black;
+    flex-basis: 100%;
     max-width: 90vw;
+    background-color: white;
+    color: var(--darktext);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease-in-out;
+}
+
+.project-cell-container:hover {
+    cursor: pointer;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: all 0.15s ease-in-out;
+    box-shadow: 0 5px 25px var(--blueback);
+    transform: scale(1.025);
 }
 
 .project-cell {
     padding: 15px;
+}
+
+.project-name {
+    font-weight: bolder;
+    font-style: italic;
 }
 
 .resume-buttons {
