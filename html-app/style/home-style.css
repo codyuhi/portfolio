@@ -36,10 +36,13 @@ h3 {
 
 .navbar-text, .bx {
     color: var(--lighttext) !important;
+    transition: all .25s ease-in-out;
 }
 
 .navbar-text:hover {
     text-decoration: none;
+    color: var(--linktext) !important;
+    transition: all .25s ease-in-out;
 }
 
 .navbar-background {
@@ -135,6 +138,7 @@ h3 {
     color: var(--darktext);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
     transition: all 0.4s ease-in-out;
+    border-radius: 8px;
 }
 
 .project-cell-container:hover {
@@ -148,6 +152,11 @@ h3 {
     transform: scale(1.025);
 }
 
+.project-cell-container:hover>div>h4 {
+    transition: all 0.15s ease-in-out;
+    color: var(--blueback);
+}
+
 .project-cell {
     padding: 15px;
 }
@@ -157,6 +166,10 @@ h3 {
     font-style: italic;
 }
 
+#experience-container {
+    padding: 50px 0 0 0;
+}
+
 .resume-buttons {
     text-decoration: none;
 }
@@ -164,10 +177,18 @@ h3 {
 .resume-buttons, .expand-buttons {
     margin: 15px;
     padding: 15px;
+    background-color: var(--blueback);
+    color: var(--lighttext);
+    font-weight: bold;
+    border: none;
+    transition: all 0.15s ease-in-out;
+    border-radius: 8px;
 }
 
-.resume-buttons, .expand-buttons:hover {
+.resume-buttons:hover, .expand-buttons:hover {
     cursor: pointer;
+    background-color: var(--darkback);
+    transition: all 0.15s ease-in-out;
 }
 
 .half-section {
@@ -180,12 +201,46 @@ h3 {
     display: none;
 }
 
+#footer-container {
+    background-color: var(--darkback);
+}
+
+#footer {
+    width: 800px;
+    max-width: 90vw;
+    align-items: space-evenly;
+}
+
+#footer-links {
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin: 50px;
+}
+
+i.fa {
+    font-size: 30px;
+}
+
+.link-text {
+    color: var(--blueback);
+    transition: all .25s ease-in-out;
+}
+
+.link-text:hover {
+    color: var(--linktext);
+    text-decoration: none;
+    transition: all .25s ease-in-out;
+}
+
+#copyright {
+    text-align: center;
+    color: var(--lighttext);
+}
+
 /* Tablet Styles */
 
 @media only screen and (min-width: 444px) and (max-width: 1019px) {
-    .project-cell-container {
-        max-width: 25vw;
-    }
     #courses-container {
         flex-direction: row;
     }
@@ -194,9 +249,19 @@ h3 {
     }
 }
 
+@media only screen and (min-width: 444px) and (max-width: 799px) {
+    .project-cell-container {
+        max-width: 75vw;
+    }
+}
+
 @media only screen and (min-width: 800px) and (max-width: 1450px) {
     #intro-container {
         animation-duration: 150s;
+    }
+    .project-cell-container {
+        max-width: 40vw;
+        flex-basis: 50%;
     }
 }
 
