@@ -6,6 +6,18 @@ html {
     scroll-behavior: smooth
 }
 
+a:hover {
+    text-decoration: none;
+}
+
+.project-name {
+    color: var(--blueback);
+}
+
+.project-description, .tech-item {
+    color: var(--darktext);
+}
+
 :root {
     --lightback: #cfdbd5;
     /* --lighttext: #e8eddf; */
