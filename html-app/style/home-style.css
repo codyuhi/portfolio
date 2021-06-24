@@ -216,6 +216,43 @@ h3 {
     transition: all 0.15s ease-in-out;
 }
 
+.timeline {
+    width: 100vw;
+    max-width: 1200px;
+}
+
+.experience-cell-container {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: inherit;
+    background-color: var(--blueback);
+    border-radius: 6px;
+    width: 90vw;
+}
+
+.experience-image, .experience-image > img {
+    width: 45vw;
+    max-width: 400px;
+    height: auto;
+}
+
+.experience-image > img {
+    margin: 25px 0 15px 0;
+    border-radius: 15px;
+}
+
+.experience-cell {
+    padding: 15px;
+    color: var(--darkback);
+    text-align: center;
+}
+
+.experience-time {
+    font-weight: bold;
+}
+
 #education-container {
     background-color: var(--lighttext);
 }
@@ -276,11 +313,17 @@ i.fa {
     #about {
         max-width: 80%;
     }
+    .experience-cell-container {
+        width: 50vw;
+    }
 }
 
 @media only screen and (min-width: 444px) and (max-width: 799px) {
     .project-cell-container {
         max-width: 75vw;
+    }
+    .experience-cell-container {
+        width: 50vw;
     }
 }
 
@@ -291,6 +334,9 @@ i.fa {
     .project-cell-container {
         max-width: 40vw;
         flex-basis: 50%;
+    }
+    .experience-cell-container {
+        width: 50vw;
     }
 }
 
@@ -308,5 +354,8 @@ i.fa {
     }
     #about {
         max-width: 80%;
+    }
+    .experience-cell-container {
+        width: 50vw;
     }
 }
