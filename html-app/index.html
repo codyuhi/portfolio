@@ -535,9 +535,13 @@
                             <li>Vice President - BYU IT Student Association</li>
                         </ul>
                     </div>
+                    <div id="courses-buttons-container" class="flex-row center">
+                        <button class="expand-buttons" onclick="toggleCourses('stem')">STEM Courses</button>
+                        <button class="expand-buttons" onclick="toggleCourses('non-stem')">Non-STEM Courses</button>
+                    </div>
                     <div id="courses-container" class="center">
                         <div id="stem-courses" class="flex-column center">
-                            <button class="expand-buttons" onclick="toggleCourses('stem')">STEM Courses</button>
+                            
                             <div id="stem-list" class="half-section hidden">
                                 <ul class="course-list">
                                     <li class="course">MFG130: Modern Engineering</li>
@@ -578,7 +582,6 @@
                             </div>
                         </div>
                         <div id="non-stem-courses" class="flex-column center">
-                            <button class="expand-buttons" onclick="toggleCourses('non-stem')">Non-STEM Courses</button>
                             <div id="non-stem-list" class="half-section hidden">
                                 <ul class="course-list">
                                     <li class="course">DANCE378R: Folk Dance Performance</li>
