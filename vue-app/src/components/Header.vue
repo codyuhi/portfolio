@@ -1,5 +1,5 @@
 <template>
-  <div id="header-container">
+  <div id="header-container" class="section">
     <!-- Inspired by the Personal template -->
     <div id="header">
       <h2>Header</h2>
@@ -14,4 +14,7 @@ export default {
 </script>
 
 <style scoped>
+#header-container {
+  background-color: var(--darkest);
+}
 </style>

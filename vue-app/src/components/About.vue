@@ -1,5 +1,5 @@
 <template>
-  <div id="about-container">
+  <div id="about-container" class="section">
     <!-- Inspired by the iPortfolio template -->
     <div id="about">
       <h2>About</h2>
