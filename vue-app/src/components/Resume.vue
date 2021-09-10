@@ -1,5 +1,5 @@
 <template>
-  <div id="resume-container">
+  <div id="resume-container" class="section">
     <!-- Inspired by the Personal template -->
     <div id="resume">
       <h2>Resume</h2>

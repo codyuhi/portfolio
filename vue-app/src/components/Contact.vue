@@ -1,5 +1,5 @@
 <template>
-  <div id="contact-container">
+  <div id="contact-container" class="section">
     <!-- Inspired by the iPortfolio template -->
     <div id="contact">
       <h2>Contact</h2>

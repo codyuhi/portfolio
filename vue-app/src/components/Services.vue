@@ -1,5 +1,5 @@
 <template>
-  <div id="services-container">
+  <div id="services-container" class="section">
     <!-- Inspired by the MyResume template -->
     <div id="services">
       <h2>Services</h2>

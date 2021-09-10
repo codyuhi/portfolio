@@ -1,5 +1,5 @@
 <template>
-  <div id="blog-container">
+  <div id="blog-container" class="section">
     <!-- Inspired by the DevFolio template -->
     <div id="blog">
       <h2>Blog</h2>

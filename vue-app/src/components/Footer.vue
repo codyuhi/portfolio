@@ -1,5 +1,5 @@
 <template>
-  <div id="footer-container">
+  <div id="footer-container" class="section">
     <!-- Inspired by the iPortfolio template -->
     <div id="footer">
       <h2>Footer</h2>
