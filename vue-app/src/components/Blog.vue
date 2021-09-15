@@ -14,4 +14,7 @@ export default {
 </script>
 
 <style scoped>
+#blog {
+  color: var(--darkest);
+}
 </style>

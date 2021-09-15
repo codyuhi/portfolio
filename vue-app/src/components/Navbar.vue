@@ -1,11 +1,159 @@
 <template>
-  <div
-    id="navbar-container"
-    v-bind:class="activeSection !== 'home' ? 'opaque-background' : ''"
-  >
-    <!-- Desktop view inspired by the DevFolio template -->
+  <div id="navbar-container">
     <!-- Mobile view inspired by the iPortfolio template -->
-    <div id="navbar">
+    <div id="mobile-navbar">
+      <div
+        id="mobile-nav-button-container"
+        v-bind:class="activeSection !== 'home' ? 'opaque-menu-icon' : ''"
+      >
+        <div
+          id="mobile-nav-button"
+          v-bind:class="menuExpanded ? 'open' : ''"
+          v-on:click="toggleMenuIcon()"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div
+        id="sidebar-container"
+        v-bind:class="menuExpanded ? 'open' : closed ? 'closed' : ''"
+      >
+        <div id="sidebar">
+          <div id="sidebar-img-container">
+            <img src="../assets/peace-sign.png" id="sidebar-img" />
+          </div>
+          <div id="name-icons-container">
+            <h2>ウヒ・コーディ</h2>
+            <span>( Cody Uhi )</span>
+            <div id="icons-container">
+              <div id="icons">
+                <a href="https://twitter.com/CodeUhi"
+                  ><i class="fa fa-twitter"></i
+                ></a>
+                <a href="https://www.facebook.com/cody.uhi"
+                  ><i class="fa fa-facebook"></i
+                ></a>
+                <a href="https://www.linkedin.com/in/codyuhi/"
+                  ><i class="fa fa-linkedin"></i
+                ></a>
+                <a href="https://www.instagram.com/uhicody/"
+                  ><i class="fa fa-instagram"></i
+                ></a>
+                <a href="https://github.com/codyuhi"
+                  ><i class="fa fa-github"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div id="sidebar-links-container">
+            <div id="sidebar-links">
+              <nav>
+                <ul>
+                  <li>
+                    <a
+                      href="#header-container"
+                      v-bind:class="
+                        activeSection === 'home'
+                          ? 'active nav-item'
+                          : 'nav-item'
+                      "
+                      v-on:click="toggleMenuIcon()"
+                      ><i class="fa fa-home"></i> Home</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#about-container"
+                      v-bind:class="
+                        activeSection === 'about'
+                          ? 'active nav-item'
+                          : 'nav-item'
+                      "
+                      v-on:click="toggleMenuIcon()"
+                      ><i class="fa fa-user-o"></i> About</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#services-container"
+                      v-bind:class="
+                        activeSection === 'services'
+                          ? 'active nav-item'
+                          : 'nav-item'
+                      "
+                      v-on:click="toggleMenuIcon()"
+                      ><i class="fa fa-terminal"></i> Services</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#resume-container"
+                      v-bind:class="
+                        activeSection === 'resume'
+                          ? 'active nav-item'
+                          : 'nav-item'
+                      "
+                      v-on:click="toggleMenuIcon()"
+                      ><i class="fa fa-vcard-o"></i> Resume</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#portfolio-container"
+                      v-bind:class="
+                        activeSection === 'portfolio'
+                          ? 'active nav-item'
+                          : 'nav-item'
+                      "
+                      v-on:click="toggleMenuIcon()"
+                      ><i class="fa fa-file-code-o"></i> Portfolio</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#blog-container"
+                      v-bind:class="
+                        activeSection === 'blog'
+                          ? 'active nav-item'
+                          : 'nav-item'
+                      "
+                      v-on:click="toggleMenuIcon()"
+                      ><i class="fa fa-pencil-square-o"></i> Blog</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#contact-container"
+                      v-bind:class="
+                        activeSection === 'contact'
+                          ? 'active nav-item'
+                          : 'nav-item'
+                      "
+                      v-on:click="toggleMenuIcon()"
+                      ><i class="fa fa-paper-plane-o"></i> Contact</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div id="sidebar-copyright-container">
+            <div id="sidebar-copyright">
+              <p>&copy; Copyright Cody Uhi</p>
+              <p>2021年9月</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Desktop view inspired by the DevFolio template -->
+    <div
+      id="desktop-navbar"
+      v-bind:class="activeSection !== 'home' ? 'opaque-background' : ''"
+    >
       <h1><a href="#header-container">CodeUhi</a></h1>
       <nav>
         <ul>
@@ -90,6 +238,8 @@ export default {
   name: "Navbar",
   data() {
     return {
+      menuExpanded: Boolean,
+      closed: Boolean,
       activeSection: String,
       homeSection: Object,
       aboutSection: Object,
@@ -152,8 +302,14 @@ export default {
         return;
       }
     },
+    toggleMenuIcon: function () {
+      this.menuExpanded = this.menuExpanded ? false : true;
+      this.closed = true;
+    },
   },
   mounted() {
+    this.menuExpanded = false;
+    this.closed = false;
     this.homeSection = document.querySelector("#header-container");
     this.aboutSection = document.querySelector("#about-container");
     this.servicesSection = document.querySelector("#services-container");
@@ -185,21 +341,242 @@ export default {
 .opaque-background {
   background-color: var(--darkest);
 }
-.active {
+.opaque-menu-icon > div > span {
+  background: var(--darkest) !important;
+}
+.active,
+.active > i {
   color: var(--light);
 }
 a {
   color: var(--lightest);
   text-decoration: none;
 }
-
-/* Tablet View */
-@media only screen and (min-width: 444px) and (max-width: 1019px) {
+#desktop-navbar {
+  display: none;
+}
+#mobile-navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+#mobile-nav-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 25px;
+}
+#mobile-nav-button {
+  display: flex;
+  flex-direction: column;
+  width: 25px;
+  height: 25px;
+  margin: 25px auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+#mobile-nav-button span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: var(--lightest);
+  border-radius: 3px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+#mobile-nav-button span:nth-child(1) {
+  top: 0px;
+}
+#mobile-nav-button span:nth-child(2),
+#mobile-nav-button span:nth-child(3) {
+  top: 10px;
+}
+#mobile-nav-button span:nth-child(4) {
+  top: 20px;
+}
+#mobile-nav-button.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+#mobile-nav-button.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#mobile-nav-button.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+#mobile-nav-button.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+#sidebar-container {
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--darkest);
+  width: 35vw;
+  min-width: 250px;
+  height: 100vh;
+  z-index: 3;
+}
+#sidebar-container.open {
+  display: flex;
+  position: absolute;
+  left: 0px;
+  top: 0;
+  -webkit-animation: slideIn 0.35s forwards;
+  -moz-animation: slideIn 0.35s forwards;
+  animation: slideIn 0.35s forwards;
+}
+@-webkit-keyframes slideIn {
+  0% {
+    transform: translateX(-900px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-moz-keyframes slideIn {
+  0% {
+    transform: translateX(-900px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideIn {
+  0% {
+    transform: translateX(-900px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+#sidebar-container.closed {
+  display: flex;
+  position: absolute;
+  left: -900px;
+  top: 0;
+  -webkit-animation: slideOut 0.5s forwards;
+  -moz-animation: slideOut 0.5s forwards;
+  animation: slideOut 0.5s forwards;
+}
+@-webkit-keyframes slideOut {
+  0% {
+    transform: translateX(900px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-moz-keyframes slideOut {
+  0% {
+    transform: translateX(900px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideOut {
+  0% {
+    transform: translateX(900px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+}
+#sidebar-img-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 25px 15px 15px 15px;
+}
+#sidebar-img {
+  width: 75%;
+  height: auto;
+  border-radius: 50%;
+}
+#name-icons-container {
+  color: var(--lightest);
+  text-align: center;
+  margin: 15px;
+}
+#icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+#icons > a > i {
+  font-size: 20px;
+  color: var(--light);
+  margin: 10px;
+}
+li > a > i {
+  font-size: 20px;
+  color: var(--lightest);
+  margin: 10px;
+}
+li {
+  margin: 5px 30px 5px 30px;
+  text-transform: uppercase;
+}
+#sidebar-copyright-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  width: 100%;
+  bottom: 15px;
+}
+#sidebar-copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--lightest);
 }
 
 /* Desktop View */
-@media only screen and (min-width: 1020px) {
-  #navbar {
+@media only screen and (min-width: 800px) {
+  #mobile-navbar {
+    display: none;
+  }
+  #desktop-navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
