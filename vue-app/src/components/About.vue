@@ -14,4 +14,7 @@ export default {
 </script>
 
 <style scoped>
+#about {
+  color: var(--darkest);
+}
 </style>

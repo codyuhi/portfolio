@@ -14,4 +14,7 @@ export default {
 </script>
 
 <style scoped>
+#portfolio {
+  color: var(--darkest);
+}
 </style>

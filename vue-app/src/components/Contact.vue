@@ -14,4 +14,7 @@ export default {
 </script>
 
 <style scoped>
+#contact {
+  color: var(--darkest);
+}
 </style>

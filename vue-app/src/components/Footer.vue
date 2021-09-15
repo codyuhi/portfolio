@@ -14,4 +14,7 @@ export default {
 </script>
 
 <style scoped>
+#footer-container {
+  background-color: var(--darkest);
+}
 </style>

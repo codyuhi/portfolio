@@ -14,4 +14,7 @@ export default {
 </script>
 
 <style scoped>
+#resume {
+  color: var(--darkest);
+}
 </style>
