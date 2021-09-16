@@ -365,6 +365,9 @@ a {
   display: none;
 }
 #mobile-navbar {
+  /* position: fixed;
+  top: 0;
+  right: 0; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -624,7 +627,6 @@ li {
   li > a::after {
     content: "";
     display: block;
-    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     height: 2px;
