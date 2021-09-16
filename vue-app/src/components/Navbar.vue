@@ -337,6 +337,7 @@ export default {
   -webkit-transition: background-color 500ms ease-in-out;
   -ms-transition: background-color 500ms ease-in-out;
   transition: background-color 500ms ease-in-out;
+  z-index: 3;
 }
 .opaque-background {
   background-color: var(--darkest);
@@ -572,10 +573,11 @@ li {
 }
 
 /* Desktop View */
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 855px) {
   #navbar-container {
     display: flex;
     justify-content: center;
+    max-width: 1920px;
   }
   #mobile-navbar {
     display: none;
