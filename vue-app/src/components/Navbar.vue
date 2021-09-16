@@ -4,7 +4,11 @@
     <div id="mobile-navbar">
       <div
         id="mobile-nav-button-container"
-        v-bind:class="activeSection !== 'home' ? 'opaque-menu-icon' : ''"
+        v-bind:class="
+          activeSection === 'home'
+            ? ''
+            : activeSection === 'about' ? 'about-menu-icon' : 'opaque-menu-icon'
+        "
       >
         <div
           id="mobile-nav-button"
@@ -301,6 +305,7 @@ export default {
         this.activeSection = "contact";
         return;
       }
+      this.activeSection = "home";
     },
     toggleMenuIcon: function () {
       this.menuExpanded = this.menuExpanded ? false : true;
@@ -344,6 +349,9 @@ export default {
 }
 .opaque-menu-icon > div > span {
   background: var(--darkest) !important;
+}
+.about-menu-icon > div > span {
+  background: var(--light) !important;
 }
 .active,
 .active > i {
