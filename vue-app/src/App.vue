@@ -1,6 +1,6 @@
 <template>
-  <div id="app-container">
-    <div id="app">
+  <div id="content-container">
+    <div id="content">
       <Navbar />
       <Header />
       <About />

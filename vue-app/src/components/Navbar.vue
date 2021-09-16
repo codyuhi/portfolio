@@ -573,10 +573,15 @@ li {
 
 /* Desktop View */
 @media only screen and (min-width: 800px) {
+  #navbar-container {
+    display: flex;
+    justify-content: center;
+  }
   #mobile-navbar {
     display: none;
   }
   #desktop-navbar {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

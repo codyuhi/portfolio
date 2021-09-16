@@ -2,7 +2,30 @@
   <div id="header-container" class="section">
     <!-- Inspired by the Personal template -->
     <div id="header">
-      <h2>Header</h2>
+      <div id="header-img-container">
+        <img src="../assets/suit.png" id="header-img" />
+      </div>
+      <div id="header-text-container">
+        <h1>Cody Uhi</h1>
+        <p>(ウヒ・コーディ)</p>
+        <p>Site Reliability Engineer</p>
+        <p>Full-Stack Software Engineer</p>
+        <div id="header-icons-container">
+          <a href="https://twitter.com/CodeUhi"
+            ><i class="fa fa-twitter"></i
+          ></a>
+          <a href="https://www.facebook.com/cody.uhi"
+            ><i class="fa fa-facebook"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/codyuhi/"
+            ><i class="fa fa-linkedin"></i
+          ></a>
+          <a href="https://www.instagram.com/uhicody/"
+            ><i class="fa fa-instagram"></i
+          ></a>
+          <a href="https://github.com/codyuhi"><i class="fa fa-github"></i></a>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -16,5 +39,75 @@ export default {
 <style scoped>
 #header-container {
   background-color: var(--darkest);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+#header {
+  width: 100%;
+  max-width: 1920px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+#header-img-container {
+  display: flex;
+  flex: 1;
+}
+#header-img {
+  border-radius: 50%;
+  height: 40vh;
+  width: auto;
+}
+#header-text-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+#header-text-container > h1,
+#header-text-container > p {
+  text-align: center;
+  margin-bottom: 10px;
+}
+h1 {
+  font-size: 45px;
+}
+#header-icons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 15px;
+}
+#header-icons-container > a > i {
+  font-size: 20px;
+  color: var(--light);
+  margin-right: 20px;
+}
+
+/* Desktop View */
+@media only screen and (min-width: 800px) {
+  #header-container {
+    background-image: url("../assets/suit.png");
+    background-repeat: no-repeat;
+    background-size: 60vw;
+    background-position-x: 90%;
+    background-position-y: 100%;
+  }
+  #header-img-container {
+    display: none;
+  }
+  #header-text-container {
+    align-items: flex-start;
+    margin-left: 15vw;
+  }
 }
 </style>
