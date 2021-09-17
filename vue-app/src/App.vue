@@ -2,7 +2,7 @@
   <div id="content-container">
     <div id="content">
       <Navbar />
-      <Header />
+      <Hero />
       <About />
       <Services />
       <Resume />
@@ -19,7 +19,7 @@ import About from "./components/About.vue";
 import Blog from "./components/Blog.vue";
 import Contact from "./components/Contact.vue";
 import Footer from "./components/Footer.vue";
-import Header from "./components/Header.vue";
+import Hero from "./components/Hero.vue";
 import Navbar from "./components/Navbar.vue";
 import Portfolio from "./components/Portfolio.vue";
 import Resume from "./components/Resume.vue";
@@ -32,7 +32,7 @@ export default {
     Blog,
     Contact,
     Footer,
-    Header,
+    Hero,
     Navbar,
     Portfolio,
     Resume,

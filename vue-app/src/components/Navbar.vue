@@ -60,7 +60,7 @@
                 <ul>
                   <li>
                     <a
-                      href="#header-container"
+                      href="#hero-container"
                       v-bind:class="
                         activeSection === 'home'
                           ? 'active nav-item'
@@ -160,13 +160,13 @@
       id="desktop-navbar"
       v-bind:class="activeSection !== 'home' ? 'opaque-background' : ''"
     >
-      <h1><a href="#header-container">CodeUhi</a></h1>
+      <h1><a href="#hero-container">CodeUhi</a></h1>
       <nav>
         <ul>
           <li>
             <a
               id="home-link"
-              href="#header-container"
+              href="#hero-container"
               v-bind:class="
                 activeSection === 'home' ? 'active nav-item' : 'nav-item'
               "
@@ -307,9 +307,11 @@ export default {
         this.activeSection = "contact";
         return;
       }
-      if (this.activeSection === "about") {
+      if (this.activeSection === "about" || this.activeSection === undefined) {
         this.activeSection = "home";
+        return;
       }
+      // alert('got here 1 ' + typeof this.activeSection);
     },
     toggleMenuIcon: function () {
       this.menuExpanded = this.menuExpanded ? false : true;
@@ -317,9 +319,10 @@ export default {
     },
   },
   mounted() {
+    this.activeSection = undefined;
     this.menuExpanded = false;
     this.closed = false;
-    this.homeSection = document.querySelector("#header-container");
+    this.homeSection = document.querySelector("#hero-container");
     this.aboutSection = document.querySelector("#about-container");
     this.servicesSection = document.querySelector("#services-container");
     this.resumeSection = document.querySelector("#resume-container");
@@ -327,6 +330,7 @@ export default {
     this.blogSection = document.querySelector("#blog-container");
     this.contactSection = document.querySelector("#contact-container");
     this.setActiveSection();
+    // alert('got here 2 ' + this.activeSection);
     window.addEventListener("scroll", this.setActiveSection);
   },
   unmounted() {
