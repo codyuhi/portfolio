@@ -48,6 +48,7 @@ export default {
   width: 100vw;
   display: flex;
   justify-content: center;
+  border: 1px solid var(--darkest);
 }
 #header {
   width: 100%;
@@ -78,7 +79,9 @@ export default {
 }
 #header-text {
   z-index: 2;
-  margin: 25px;
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5%;
 }
 #header-text > h1,
 #header-text > p {
@@ -102,6 +105,78 @@ h1 {
 }
 #header-filler {
   display: none;
+}
+
+@media only screen and (max-height: 620px) {
+  #header-img-container {
+    display: none;
+  }
+  #header-container {
+    background-image: url("../assets/suit.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 100%;
+    background-position-y: 100%;
+  }
+  #header {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #header-text > h1,
+  #header-text > p {
+    text-align: left;
+  }
+  #header-text-container {
+    flex: 2;
+  }
+  #header-icons-container {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  #header-icons-container > a > i {
+    margin: 0 20px 0 0;
+  }
+  #header-filler {
+    display: flex;
+    flex: 1;
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 854px) {
+  #header-container {
+    background-image: url("../assets/suit.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 100%;
+    background-position-y: 100%;
+  }
+  #header {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #header-img-container {
+    display: none;
+  }
+  #header-text > h1,
+  #header-text > p {
+    text-align: left;
+  }
+  #header-text-container {
+    flex: 2;
+  }
+  #header-icons-container {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  #header-icons-container > a > i {
+    margin: 0 20px 0 0;
+  }
+  #header-filler {
+    display: flex;
+    flex: 1;
+  }
 }
 
 /* Tablet View */
@@ -133,7 +208,7 @@ h1 {
     align-items: flex-start;
   }
   #header-icons-container > a > i {
-    margin-right: 20px;
+    margin: 0 20px 0 0;
   }
   #header-filler {
     display: flex;
@@ -171,7 +246,7 @@ h1 {
     align-items: flex-start;
   }
   #header-icons-container > a > i {
-    margin-right: 20px;
+    margin: 0 20px 0 0;
   }
   #header-filler {
     display: flex;

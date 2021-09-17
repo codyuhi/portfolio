@@ -7,7 +7,9 @@
         v-bind:class="
           activeSection === 'home'
             ? ''
-            : activeSection === 'about' ? 'about-menu-icon' : 'opaque-menu-icon'
+            : activeSection === 'about'
+            ? 'about-menu-icon'
+            : 'opaque-menu-icon'
         "
       >
         <div
@@ -305,7 +307,9 @@ export default {
         this.activeSection = "contact";
         return;
       }
-      this.activeSection = "home";
+      if (this.activeSection === "about") {
+        this.activeSection = "home";
+      }
     },
     toggleMenuIcon: function () {
       this.menuExpanded = this.menuExpanded ? false : true;
@@ -376,6 +380,7 @@ a {
   justify-content: flex-end;
   align-items: center;
   margin-right: 25px;
+  z-index: 4;
 }
 #mobile-nav-button {
   display: flex;
@@ -580,8 +585,48 @@ li {
   color: var(--lightest);
 }
 
+@media only screen and (max-height: 570px) {
+  #icons > a > i {
+    margin: 5px;
+  }
+  li > a > i {
+    margin: 5px;
+  }
+  #icons-container {
+    display: none;
+  }
+  #sidebar-copyright-container {
+    display: none;
+  }
+}
+
+@media only screen and (max-height: 665px) {
+  #name-icons-container {
+    margin: 10px;
+  }
+  #sidebar-img-container {
+    display: none;
+  }
+}
+
+@media only screen and (max-height: 735px) {
+  #sidebar-img {
+    height: 100px;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 854px) {
+  h1 > a {
+    display: none !important;
+  }
+  #desktop-navbar {
+    background-color: var(--darkest) !important;
+  }
+}
+
 /* Desktop View */
-@media only screen and (min-width: 855px) {
+@media only screen and (min-width: 800px) {
   #navbar-container {
     display: flex;
     justify-content: center;
