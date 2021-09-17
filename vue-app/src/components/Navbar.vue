@@ -4,7 +4,13 @@
     <div id="mobile-navbar">
       <div
         id="mobile-nav-button-container"
-        v-bind:class="activeSection !== 'home' ? 'opaque-menu-icon' : ''"
+        v-bind:class="
+          activeSection === 'home'
+            ? ''
+            : activeSection === 'about'
+            ? 'about-menu-icon'
+            : 'opaque-menu-icon'
+        "
       >
         <div
           id="mobile-nav-button"
@@ -54,7 +60,7 @@
                 <ul>
                   <li>
                     <a
-                      href="#header-container"
+                      href="#hero-container"
                       v-bind:class="
                         activeSection === 'home'
                           ? 'active nav-item'
@@ -154,13 +160,13 @@
       id="desktop-navbar"
       v-bind:class="activeSection !== 'home' ? 'opaque-background' : ''"
     >
-      <h1><a href="#header-container">CodeUhi</a></h1>
+      <h1><a href="#hero-container">CodeUhi</a></h1>
       <nav>
         <ul>
           <li>
             <a
               id="home-link"
-              href="#header-container"
+              href="#hero-container"
               v-bind:class="
                 activeSection === 'home' ? 'active nav-item' : 'nav-item'
               "
@@ -301,6 +307,11 @@ export default {
         this.activeSection = "contact";
         return;
       }
+      if (this.activeSection === "about" || this.activeSection === undefined) {
+        this.activeSection = "home";
+        return;
+      }
+      // alert('got here 1 ' + typeof this.activeSection);
     },
     toggleMenuIcon: function () {
       this.menuExpanded = this.menuExpanded ? false : true;
@@ -308,9 +319,10 @@ export default {
     },
   },
   mounted() {
+    this.activeSection = undefined;
     this.menuExpanded = false;
     this.closed = false;
-    this.homeSection = document.querySelector("#header-container");
+    this.homeSection = document.querySelector("#hero-container");
     this.aboutSection = document.querySelector("#about-container");
     this.servicesSection = document.querySelector("#services-container");
     this.resumeSection = document.querySelector("#resume-container");
@@ -318,6 +330,7 @@ export default {
     this.blogSection = document.querySelector("#blog-container");
     this.contactSection = document.querySelector("#contact-container");
     this.setActiveSection();
+    // alert('got here 2 ' + this.activeSection);
     window.addEventListener("scroll", this.setActiveSection);
   },
   unmounted() {
@@ -337,12 +350,16 @@ export default {
   -webkit-transition: background-color 500ms ease-in-out;
   -ms-transition: background-color 500ms ease-in-out;
   transition: background-color 500ms ease-in-out;
+  z-index: 3;
 }
 .opaque-background {
   background-color: var(--darkest);
 }
 .opaque-menu-icon > div > span {
   background: var(--darkest) !important;
+}
+.about-menu-icon > div > span {
+  background: var(--light) !important;
 }
 .active,
 .active > i {
@@ -367,6 +384,7 @@ a {
   justify-content: flex-end;
   align-items: center;
   margin-right: 25px;
+  z-index: 4;
 }
 #mobile-nav-button {
   display: flex;
@@ -571,12 +589,58 @@ li {
   color: var(--lightest);
 }
 
+@media only screen and (max-height: 570px) {
+  #icons > a > i {
+    margin: 5px;
+  }
+  li > a > i {
+    margin: 5px;
+  }
+  #icons-container {
+    display: none;
+  }
+  #sidebar-copyright-container {
+    display: none;
+  }
+}
+
+@media only screen and (max-height: 665px) {
+  #name-icons-container {
+    margin: 10px;
+  }
+  #sidebar-img-container {
+    display: none;
+  }
+}
+
+@media only screen and (max-height: 735px) {
+  #sidebar-img {
+    height: 100px;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 854px) {
+  h1 > a {
+    display: none !important;
+  }
+  #desktop-navbar {
+    background-color: var(--darkest) !important;
+  }
+}
+
 /* Desktop View */
 @media only screen and (min-width: 800px) {
+  #navbar-container {
+    display: flex;
+    justify-content: center;
+    max-width: 1920px;
+  }
   #mobile-navbar {
     display: none;
   }
   #desktop-navbar {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -609,7 +673,6 @@ li {
   li > a::after {
     content: "";
     display: block;
-    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     height: 2px;
