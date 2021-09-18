@@ -187,6 +187,7 @@ h1 {
     background-size: contain;
     background-position-x: 100%;
     background-position-y: 100%;
+    max-width: 100vw;
   }
   #hero {
     flex-direction: row;
@@ -218,14 +219,12 @@ h1 {
 
 /* Desktop View */
 @media only screen and (min-width: 1012px) {
-  #hero-container {
+  #hero {
     background-image: url("../assets/suit.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position-x: 80%;
     background-position-y: 100%;
-  }
-  #hero {
     max-width: 1500px;
     flex-direction: row;
     justify-content: center;

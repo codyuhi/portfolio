@@ -372,7 +372,7 @@ export default {
   background-color: var(--darkest);
 }
 .opaque-menu-icon > div > span {
-  background: var(--darkest) !important;
+  background: var(--light) !important;
 }
 .about-menu-icon > div > span {
   background: var(--light) !important;
@@ -650,7 +650,6 @@ li {
   #navbar-container {
     display: flex;
     justify-content: center;
-    max-width: 1920px;
   }
   #mobile-navbar {
     display: none;
@@ -661,6 +660,7 @@ li {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    max-width: 1920px;
     padding: 0 25px 0 15px;
   }
   h1 {

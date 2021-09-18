@@ -110,6 +110,9 @@ export default {
 #about-grid-container {
   margin: 0 0 25px 0;
 }
+h2 {
+  font-size: 35px;
+}
 i {
   font-size: 22px;
   font-weight: bold;
@@ -131,6 +134,7 @@ hr {
   width: 60vw;
   height: auto;
   margin-bottom: 25px;
+  max-width: 730px;
 }
 
 #about-icons > a > i {
@@ -141,7 +145,7 @@ hr {
 @media only screen and (min-width: 800px) {
   #about-container {
     margin: 0 75px 75px 75px;
-    padding: 150px 0 150px 0;
+    padding: 100px 0 70px 0;
   }
   #about {
     max-width: 1370px;
