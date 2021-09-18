@@ -45,6 +45,7 @@ export default {
 * {
   --lightest: white;
   --light: lightgreen;
+  --dark: lightcoral;
   --darkest: black;
   margin: 0;
   padding: 0;

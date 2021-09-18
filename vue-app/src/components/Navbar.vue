@@ -261,57 +261,74 @@ export default {
       let rect = this.homeSection.getBoundingClientRect();
       let top = rect.top;
       let bottom = rect.bottom;
-      if (top >= 0 && bottom <= window.innerHeight) {
+      if (bottom >= 35) {
         this.activeSection = "home";
         return;
       }
       rect = this.aboutSection.getBoundingClientRect();
       top = rect.top;
       bottom = rect.bottom;
-      if (top >= 0 && bottom <= window.innerHeight) {
+      if (
+        (this.activeSection !== "about" && top === 0) ||
+        bottom >= window.innerHeight
+      ) {
         this.activeSection = "about";
         return;
       }
       rect = this.servicesSection.getBoundingClientRect();
       top = rect.top;
       bottom = rect.bottom;
-      if (top >= 0 && bottom <= window.innerHeight) {
+      if (
+        (this.activeSection !== "services" && top === 0) ||
+        bottom >= window.innerHeight
+      ) {
         this.activeSection = "services";
         return;
       }
       rect = this.resumeSection.getBoundingClientRect();
       top = rect.top;
       bottom = rect.bottom;
-      if (top >= 0 && bottom <= window.innerHeight) {
+      if (
+        (this.activeSection !== "resume" && top === 0) ||
+        bottom >= window.innerHeight
+      ) {
         this.activeSection = "resume";
         return;
       }
       rect = this.portfolioSection.getBoundingClientRect();
       top = rect.top;
       bottom = rect.bottom;
-      if (top >= 0 && bottom <= window.innerHeight) {
+      if (
+        (this.activeSection !== "portfolio" && top === 0) ||
+        bottom >= window.innerHeight
+      ) {
         this.activeSection = "portfolio";
         return;
       }
       rect = this.blogSection.getBoundingClientRect();
       top = rect.top;
       bottom = rect.bottom;
-      if (top >= 0 && bottom <= window.innerHeight) {
+      if (
+        (this.activeSection !== "blog" && top === 0) ||
+        bottom >= window.innerHeight
+      ) {
         this.activeSection = "blog";
         return;
       }
       rect = this.contactSection.getBoundingClientRect();
       top = rect.top;
       bottom = rect.bottom;
-      if (top >= 0 && bottom <= window.innerHeight) {
+      if (
+        (this.activeSection !== "contact" && top === 0) ||
+        bottom >= window.innerHeight
+      ) {
         this.activeSection = "contact";
         return;
       }
-      if (this.activeSection === "about" || this.activeSection === undefined) {
+      if (this.activeSection === undefined) {
         this.activeSection = "home";
         return;
       }
-      // alert('got here 1 ' + typeof this.activeSection);
     },
     toggleMenuIcon: function () {
       this.menuExpanded = this.menuExpanded ? false : true;
@@ -330,7 +347,6 @@ export default {
     this.blogSection = document.querySelector("#blog-container");
     this.contactSection = document.querySelector("#contact-container");
     this.setActiveSection();
-    // alert('got here 2 ' + this.activeSection);
     window.addEventListener("scroll", this.setActiveSection);
   },
   unmounted() {
