@@ -73,15 +73,15 @@ export default {
           bullets: [
             {
               id: "be1",
-              value: "Back-end Web Development (NodeJS, Python, Java, Ruby)",
+              value: "Back-end Development (Node, Python, Java, Ruby, C++)",
             },
             {
               id: "be2",
-              value: "Object Oriented Programming (C++, Java)",
+              value: "Database Development (MySQL, Mongo, PostgreSQL)",
             },
             {
               id: "be3",
-              value: "",
+              value: "API Development (RESTful APIs)",
             },
           ],
           icon: "code",
@@ -92,15 +92,15 @@ export default {
           bullets: [
             {
               id: "qa1",
-              value: "Voluptatum deleniti atque corrupti quos dolores",
+              value: "Manual Testing Processes (UI Level)",
             },
             {
               id: "qa2",
-              value: "Voluptatum deleniti atque corrupti quos dolores",
+              value: "Adherance to QA Process (Feature, Integration, Smoke)",
             },
             {
               id: "qa3",
-              value: "Voluptatum deleniti atque corrupti quos dolores",
+              value: "Unit Testing (Selenium, Jest, Mocha & Chai)",
             },
           ],
           icon: "chain-broken",
@@ -111,15 +111,15 @@ export default {
           bullets: [
             {
               id: "ci1",
-              value: "Voluptatum deleniti atque corrupti quos dolores",
+              value: "Containerization (Docker, Kubernetes)",
             },
             {
               id: "ci2",
-              value: "Voluptatum deleniti atque corrupti quos dolores",
+              value: "Source Control & Code Flow (Git, Jenkins)",
             },
             {
               id: "ci3",
-              value: "Voluptatum deleniti atque corrupti quos dolores",
+              value: "Automating via Scripting (Salt, Python, Bash)",
             },
           ],
           icon: "code-fork",
@@ -130,15 +130,15 @@ export default {
           bullets: [
             {
               id: "cl1",
-              value: "Voluptatum deleniti atque corrupti quos dolores",
+              value: "Cloud Administration (AWS, Azure, GCP)",
             },
             {
               id: "cl2",
-              value: "Voluptatum deleniti atque corrupti quos dolores",
+              value: "Serverless Computing (AWS Lambda, GCP Functions)",
             },
             {
               id: "cl3",
-              value: "Voluptatum deleniti atque corrupti quos dolores",
+              value: "Cloud Database Management (AWS & Azure DynamoDB)",
             },
           ],
           icon: "cloud",
@@ -149,15 +149,15 @@ export default {
           bullets: [
             {
               id: "ai1",
-              value: "Voluptatum deleniti atque corrupti quos dolores",
+              value: "Data Visualization & Modeling (Jupyter, Pandas)",
             },
             {
               id: "ai2",
-              value: "Voluptatum deleniti atque corrupti quos dolores",
+              value: "Image Recognition (Tensorflow, Google Vision API)",
             },
             {
               id: "ai3",
-              value: "Voluptatum deleniti atque corrupti quos dolores",
+              value: "Data Gathering & Processing (Leveraging Data Streams)",
             },
           ],
           icon: "lightbulb-o",
@@ -214,7 +214,7 @@ hr {
   display: flex;
   flex-direction: column;
   margin: 20px;
-  border: 1px solid var(--lightest);
+  /* border: 1px solid var(--light); */
   width: 300px;
   max-width: 90vw;
   border-radius: 1.5%;
@@ -234,6 +234,8 @@ hr {
   justify-content: center;
   align-items: center;
   padding: 25px;
+  border: 1px solid var(--light);
+  border-radius: 0 0 1.5% 1.5%;
 }
 i {
   font-size: 35px;
@@ -263,7 +265,7 @@ ul {
   list-style-type: none;
 }
 .service-bullet {
-  margin: 10px;
+  margin: 20px 10px 20px 10px;
 }
 
 /* Tablet View */
