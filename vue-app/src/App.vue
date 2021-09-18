@@ -45,6 +45,7 @@ export default {
 * {
   --lightest: white;
   --light: lightgreen;
+  --neutral: lightslategray;
   --dark: lightcoral;
   --darkest: black;
   margin: 0;
@@ -57,6 +58,7 @@ export default {
 }
 
 .section {
+  max-width: 100%;
   padding: 150px 0 150px 0;
   color: var(--lightest);
 }
