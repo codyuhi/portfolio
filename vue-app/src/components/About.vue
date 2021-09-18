@@ -18,7 +18,7 @@
       </div>
       <div id="about-stats-container">
         <div id="about-img-container">
-          <img src="../assets/suit.png" id="about-img" />
+          <img src="../assets/hackathon.png" id="about-img" />
         </div>
         <div id="about-stats">
           <h2 id="about-title">
@@ -39,7 +39,7 @@
               </p>
               <p>
                 <i class="fa fa-angle-right"></i>
-                <strong>Company:</strong>Vivint (Lehi, UT)
+                <strong>Company:</strong> Vivint (Lehi, UT)
               </p>
               <p>
                 <i class="fa fa-angle-right"></i>
@@ -55,15 +55,29 @@
                 <i class="fa fa-angle-right"></i>
                 <strong>Position:</strong> Site Reliability Engineer
               </p>
+              <p id="about-icons">
+                <a href="https://twitter.com/CodeUhi"
+                  ><i class="fa fa-twitter"></i
+                ></a>
+                <a href="https://www.facebook.com/cody.uhi"
+                  ><i class="fa fa-facebook"></i
+                ></a>
+                <a href="https://www.linkedin.com/in/codyuhi/"
+                  ><i class="fa fa-linkedin"></i
+                ></a>
+                <a href="https://www.instagram.com/uhicody/"
+                  ><i class="fa fa-instagram"></i
+                ></a>
+                <a href="https://github.com/codyuhi"
+                  ><i class="fa fa-github"></i
+                ></a>
+              </p>
             </div>
           </div>
           <p>
-            Officiis eligendi itaque labore et dolorum mollitia officiis optio
-            vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor
-            incidunt officia tempore. Et eius omnis. Cupiditate ut dicta maxime
-            officiis quidem quia. Sed et consectetur qui quia repellendus itaque
-            neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui
-            repellendus omnis culpa magni laudantium dolores.
+            私の名前はコーディ・ウヒです。
+            私は米国に住むサイト信頼性エンジニアです。
+            私はテクノロジーが大好きで、新しいことを学ぶのが大好きです。
           </p>
         </div>
       </div>
@@ -79,10 +93,14 @@ export default {
 
 <style scoped>
 #about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0 50px 50px 50px;
   padding: 75px 0 75px 0;
 }
 #about {
+  width: 100vw;
   color: var(--darkest);
 }
 #about-header-container,
@@ -115,11 +133,18 @@ hr {
   margin-bottom: 25px;
 }
 
+#about-icons > a > i {
+  margin: 10px 20px 0 0;
+}
+
 /* Desktop view */
 @media only screen and (min-width: 800px) {
   #about-container {
     margin: 0 75px 75px 75px;
     padding: 150px 0 150px 0;
+  }
+  #about {
+    max-width: 1370px;
   }
   #about-stats-container {
     display: flex;
@@ -133,7 +158,7 @@ hr {
     margin: 0 25px 0 0;
   }
   #about-img {
-    width: 30vw;
+    width: 35vw;
   }
   #about-stats {
     margin: 0 0 0 25px;
