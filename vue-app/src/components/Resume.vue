@@ -192,24 +192,24 @@ export default {
               endTime: "2021",
               location: "Vivint Smart Home - Lehi, UT",
               summary:
-                "Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.",
+                "QA Engineers on full-stack mobile application teams provide value to their Agile teams by ensuring that the application and platform's functionality is not compromised by any problems in a release. The tested mobile application allowed in-house field technicians to perform and document their work using iOS devices.",
               bullets: [
-                { id: "sqa1", value: "test1" },
-                { id: "sqa2", value: "test2" },
-                { id: "sqa3", value: "test3" },
-              ],
-            },
-            {
-              name: "Sr. Lead, Technology / Web Developer",
-              startTime: "2015",
-              endTime: "2020",
-              location: "Vivint Smart Home - Provo, UT",
-              summary:
-                "Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.",
-              bullets: [
-                { id: "tech1", value: "test1" },
-                { id: "tech2", value: "test2" },
-                { id: "tech3", value: "test3" },
+                {
+                  id: "sqa1",
+                  value:
+                    "Create detailed, comprehensive, and well-structured test plans and test cases (both manual and automated)",
+                },
+                {
+                  id: "sqa2",
+                  value:
+                    "Estimate, prioritize, plan, and coordinate testing activities",
+                },
+                { id: "sqa3", value: "Execute regression test runs" },
+                {
+                  id: "sqa4",
+                  value:
+                    "Play an integral role in the Agile software development life cycle",
+                },
               ],
             },
             {
@@ -218,11 +218,53 @@ export default {
               endTime: "2020",
               location: "Instructure - Salt Lake City, UT",
               summary:
-                "Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.",
+                "Instructure's Full-Stack developers support Canvas and Bridge - Learning Management Systems that are used widely throughout the world in educational and professional environments.",
               bullets: [
-                { id: "inst1", value: "test1" },
-                { id: "inst2", value: "test2" },
-                { id: "inst3", value: "test3" },
+                {
+                  id: "inst1",
+                  value:
+                    "Construct production-ready, full-stack code using a Ruby/Rails backend and React frontend",
+                },
+                {
+                  id: "inst2",
+                  value:
+                    "Work jointly with an R&D team using Shape Up software development methodologies",
+                },
+                {
+                  id: "inst3",
+                  value:
+                    "Contribute to the development cycle from the design phase to QA/testing and deployment",
+                },
+              ],
+            },
+            {
+              name: "Sr. Lead, Technology / Web Developer",
+              startTime: "2015",
+              endTime: "2020",
+              location: "Vivint Smart Home - Provo, UT",
+              summary:
+                "Technology Sr. Leads assist Field Pros in troubleshooting technology solutions, tracking technology issues, and responding to technology feedback and improvement ideas. The website that the technology team supported was used by thousands of Vivint employees across the country to support their work.",
+              bullets: [
+                {
+                  id: "tech1",
+                  value:
+                    "Collaborate across development teams to streamline ticket management",
+                },
+                {
+                  id: "tech2",
+                  value:
+                    "Analyze data produced by in-house technicians to drive efficiency and inform best practice",
+                },
+                {
+                  id: "tech3",
+                  value:
+                    "Design web scraping/survey tools using Python, JavaScript, jQuery, HTML, and CSS",
+                },
+                {
+                  id: "tech4",
+                  value:
+                    "Develop Python and Bash scripts to perform data analysis",
+                },
               ],
             },
             {
@@ -231,11 +273,23 @@ export default {
               endTime: "2020",
               location: "Brigham Young University - Provo, UT",
               summary:
-                "Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.",
+                "BYU's Crisis Informatics Lab uses the latest developments in Crisis Informatics to process data for the purpose of helping society in times of crisis. BYU's team developed a data pipeline in the cloud to stream data from social media to fund machine learning analysis.",
               bullets: [
-                { id: "cloud1", value: "test1" },
-                { id: "cloud2", value: "test2" },
-                { id: "cloud3", value: "test3" },
+                {
+                  id: "cloud1",
+                  value:
+                    "Build cloud infrastructure with AWS to support BYU's Crisis Informatics research platform",
+                },
+                {
+                  id: "cloud2",
+                  value:
+                    "Scrape and analyze large social media datasets using Network Analysis, Topic Modeling, Sentiment Analysis, Geocoding, Time and Keywords, etc.",
+                },
+                {
+                  id: "cloud3",
+                  value:
+                    "Implement Machine Learning models to deploy research API at scale (Python, Jupyter, Tensorflow)",
+                },
               ],
             },
             {
@@ -243,12 +297,18 @@ export default {
               startTime: "2019",
               endTime: "2019",
               location: "US Government - Washington, D.C.",
-              summary:
-                "Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.",
+              summary: "",
               bullets: [
-                { id: "cyb1", value: "test1" },
-                { id: "cyb2", value: "test2" },
-                { id: "cyb3", value: "test3" },
+                {
+                  id: "cyb1",
+                  value:
+                    "Support the design and testing of office internet networks. Create documentation related to project implementations. Coordinate and engage with inter-office components",
+                },
+                {
+                  id: "cyb2",
+                  value:
+                    "Perform cyber analysis, technical research and investigations for digital signatures, web technologies, and social media",
+                },
               ],
             },
           ],
@@ -312,7 +372,7 @@ a {
 }
 .resume-item {
   margin: 0 0 25px 0;
-  padding-left: 12px;
+  padding: 0 0 0 12px;
   border-left: 1px solid rgb(0, 0, 0, 0.5);
 }
 .resume-years {
@@ -334,7 +394,7 @@ a {
 }
 
 /* Desktop View */
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1030px) {
   #resume-container {
     margin: 0 75px 75px 75px;
     padding: 100px 0 70px 0;
@@ -346,9 +406,12 @@ a {
     justify-content: center;
     align-items: flex-start;
   }
+  .resume-item {
+    padding: 0 20px 0 12px;
+  }
   #resume-section-container-holder {
     flex-wrap: wrap;
-    height: 1750px;
+    height: 1950px;
     width: 100%;
     max-width: 100vw;
   }
