@@ -172,6 +172,9 @@ export default {
 #services-container {
   background-color: var(--darkest);
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #services,
 i {
