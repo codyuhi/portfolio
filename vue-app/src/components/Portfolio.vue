@@ -1,5 +1,6 @@
 <template>
   <div id="portfolio-container" class="section">
+    <PortfolioModal v-if="modalItem" />
     <!-- Inspired by the Personal template -->
     <div id="portfolio">
       <div id="portfolio-header-container">
@@ -16,24 +17,33 @@
           <option v-for="tag in tags" :value="tag" :key="tag">{{ tag }}</option>
         </select>
       </div>
-      <div id="portfolio-tiles-container">
+      <transition-group id="portfolio-tiles-container" name="fade" tag="div">
         <div
           v-for="item in activeItems"
           v-bind:key="item.id"
           class="portfolio-tile"
+          v-on:click="openModal(item)"
         >
-          {{ item.title }}
+          <h4 class="portfolio-tile-title">
+            {{ item.title }}
+          </h4>
         </div>
-      </div>
+      </transition-group>
     </div>
   </div>
 </template>
 
 <script>
+import PortfolioModal from "./PortfolioModal.vue";
 export default {
   name: "Portfolio",
+  components: {
+    PortfolioModal,
+  },
   data() {
     return {
+      showModal: false,
+      modalItem: null,
       activeTag: null,
       activeItems: [],
       tags: [
@@ -260,6 +270,11 @@ export default {
         }
       });
     },
+    openModal(item) {
+      console.log("item is", item);
+      this.modalItem = item;
+      this.showModal = true;
+    },
   },
   mounted() {
     this.activeItems = this.portfolioItems;
@@ -347,6 +362,31 @@ option:hover {
   border: 1px solid var(--light);
   border-radius: 1.5%;
   background-color: var(--light);
+}
+.portfolio-tile:hover {
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+}
+.portfolio-tile:hover > h4.portfolio-tile-title {
+  font-size: 20px;
+}
+.portfolio-tile-title {
+  padding: 10px;
+  background-color: rgb(0, 0, 0, 0.25);
+  border-radius: 1.5%;
+  transition: all 0.25s ease-in-out;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  transition: all 0.5s;
+  opacity: 0;
+}
+.fade-enter-active {
+  transition-delay: 0.5s;
 }
 
 /* Desktop View */
