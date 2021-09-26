@@ -4,7 +4,6 @@
     <div id="portfolio">
       <div id="portfolio-header-container">
         <div id="portfolio-header">
-          <hr />
           <h2>Portfolio</h2>
           <hr />
         </div>
@@ -24,6 +23,7 @@
           v-bind:key="item.id"
           class="portfolio-tile"
           v-on:click="openModal(item)"
+          :style="{ backgroundImage: `url(${item.imgUrl})` }"
         >
           <h4 class="portfolio-tile-title">
             {{ item.title }}
@@ -71,17 +71,18 @@ export default {
           title: "Portfolio Website",
           link: "https://codyuhi.github.io",
           codeLink: "https://github.com/codyuhi/portfolio",
-          imgUrl: "",
+          imgUrl: require("@/assets/portfolio.png"),
           tags: ["Web Frontend", "VueJS", "HTML", "CSS", "JavaScript"],
-          date: "",
-          description: "",
+          date: "September, 2021",
+          description:
+            "A frontend web application built in VueJS that is used to showcase my personal projects and work experience.  The portfolio features my UI design and photo editing work as well as my frontend word development.",
         },
         {
           id: "2",
           title: "Blog Website",
           link: "https://blog.codyuhi.me",
           codeLink: "https://github.com/codyuhi/blog",
-          imgUrl: "",
+          imgUrl: require("@/assets/blog.png"),
           tags: [
             "Web Frontend",
             "Web Backend",
@@ -92,15 +93,16 @@ export default {
             "CSS",
             "JavaScript",
           ],
-          date: "",
-          description: "",
+          date: "April, 2021",
+          description:
+            "A full-stack web application built in VueJS and NodeJS that is used to archive my thoughts and things I've learned in my day-to-day life.  It uses MongoDB to store blog post data and renders those client-side dynamically based on the data taken from the backend.",
         },
         {
           id: "3",
           title: "Online Market",
           link: null,
           codeLink: "https://github.com/codyuhi/online-market",
-          imgUrl: "",
+          imgUrl: null,
           tags: [
             "Mobile Frontend",
             "Web Backend",
@@ -109,18 +111,20 @@ export default {
             "MongoDB",
             "JavaScript",
           ],
-          date: "",
-          description: "",
+          date: "August, 2020",
+          description:
+            "A full-stack mobile application built with NodeJS on the backend and Java on the frontend.  This application allows users to create, edit, purchase, and delete items on an online marketplace.",
         },
         {
           id: "4",
           title: "Family Map",
           link: null,
           codeLink: "https://github.com/codyuhi/family-map",
-          imgUrl: "",
+          imgUrl: require("@/assets/family-map.png"),
           tags: ["Mobile Frontend", "Web Backend", "Java", "SQLite"],
-          date: "",
-          description: "",
+          date: "August, 2020",
+          description:
+            "A full-stack mobile application built with Java on both the frontend and the backend.  This application allows users to track their family history on a map of the world, marking locations of where the users' ancestors had significant life events (such as birth, marriage, and death).",
         },
         {
           id: "5",
@@ -139,8 +143,9 @@ export default {
             "CSS",
             "JavaScript",
           ],
-          date: "",
-          description: "",
+          date: "April, 2021",
+          description:
+            "A full-stack web application built with VueJS on the frontend and NodeJS on the backend.  This application allows a user to track professional networking interactions with other people and companies. It can be used to help someone on a job search to fully leverage their networking resources to land a job at a desirable company.",
         },
         {
           id: "6",
@@ -357,7 +362,9 @@ option:hover {
   max-width: 85vw;
   border: 1px solid var(--light);
   border-radius: 1.5%;
-  background-color: var(--light);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 }
 .portfolio-tile:hover {
   cursor: pointer;
@@ -368,7 +375,7 @@ option:hover {
 }
 .portfolio-tile-title {
   padding: 10px;
-  background-color: rgb(0, 0, 0, 0.25);
+  background-color: rgb(0, 0, 0, 0.75);
   border-radius: 1.5%;
   transition: all 0.25s ease-in-out;
 }
@@ -383,6 +390,16 @@ option:hover {
 }
 .fade-enter-active {
   transition-delay: 0.5s;
+}
+
+#portfolio-header {
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 900px) {
+  .portfolio-tile {
+    max-width: 300px;
+  }
 }
 
 /* Desktop View */

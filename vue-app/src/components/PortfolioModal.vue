@@ -2,7 +2,7 @@
   <transition name="modal-fade">
     <div class="modal-backdrop" v-on:click="destroyModal()">
       <div class="modal" v-on:click.stop>
-        <img v-if="item.imgUrl" src="{{ item.imgUrl }}" class="modal-img" />
+        <img v-if="item.imgUrl" :src="item.imgUrl" class="modal-img" />
         <div class="modal-text">
           <div class="modal-stats">
             <h3>Project Information</h3>
@@ -82,10 +82,12 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
-  padding: 100px;
+  padding: 50px;
   position: relative;
+  max-width: 95vw;
+  max-height: 95vh;
 }
 
 .modal > img,
@@ -134,5 +136,32 @@ a {
   font-weight: bold;
   color: var(--dark);
   background: transparent;
+}
+
+.modal-img {
+  display: flex;
+  flex: 1;
+  max-width: 80vw;
+  height: auto;
+}
+
+@media only screen and (min-width: 1020px) {
+  .modal {
+    max-width: 70vw;
+  }
+  .modal-text {
+    max-width: 40vw;
+  }
+  .modal-img {
+    max-width: 40vw;
+    max-height: 80vh;
+    margin-right: 50px;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .modal {
+    max-width: 1800px;
+  }
 }
 </style>

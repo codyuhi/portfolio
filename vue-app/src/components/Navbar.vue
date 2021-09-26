@@ -118,7 +118,7 @@
                       ><i class="fa fa-file-code-o"></i> Portfolio</a
                     >
                   </li>
-                  <li>
+                  <!-- <li>
                     <a
                       href="#blog-container"
                       v-bind:class="
@@ -129,8 +129,8 @@
                       v-on:click="toggleMenuIcon()"
                       ><i class="fa fa-pencil-square-o"></i> Blog</a
                     >
-                  </li>
-                  <li>
+                  </li> -->
+                  <!-- <li>
                     <a
                       href="#contact-container"
                       v-bind:class="
@@ -141,7 +141,7 @@
                       v-on:click="toggleMenuIcon()"
                       ><i class="fa fa-paper-plane-o"></i> Contact</a
                     >
-                  </li>
+                  </li> -->
                 </ul>
               </nav>
             </div>
@@ -213,7 +213,7 @@
               >Portfolio</a
             >
           </li>
-          <li>
+          <!-- <li>
             <a
               id="blog-link"
               href="#blog-container"
@@ -222,8 +222,8 @@
               "
               >Blog</a
             >
-          </li>
-          <li>
+          </li> -->
+          <!-- <li>
             <a
               id="contact-link"
               href="#contact-container"
@@ -232,7 +232,7 @@
               "
               >Contact</a
             >
-          </li>
+          </li> -->
         </ul>
       </nav>
     </div>
@@ -305,30 +305,30 @@ export default {
         this.activeSection = "portfolio";
         return;
       }
-      rect = this.blogSection.getBoundingClientRect();
-      top = rect.top;
-      bottom = rect.bottom;
-      if (
-        (this.activeSection !== "blog" && top === 0) ||
-        bottom >= window.innerHeight
-      ) {
-        this.activeSection = "blog";
-        return;
-      }
-      rect = this.contactSection.getBoundingClientRect();
-      top = rect.top;
-      bottom = rect.bottom;
-      if (
-        (this.activeSection !== "contact" && top === 0) ||
-        bottom >= window.innerHeight
-      ) {
-        this.activeSection = "contact";
-        return;
-      }
-      if (this.activeSection === undefined) {
-        this.activeSection = "home";
-        return;
-      }
+      // rect = this.blogSection.getBoundingClientRect();
+      // top = rect.top;
+      // bottom = rect.bottom;
+      // if (
+      //   (this.activeSection !== "blog" && top === 0) ||
+      //   bottom >= window.innerHeight
+      // ) {
+      //   this.activeSection = "blog";
+      //   return;
+      // }
+      // rect = this.contactSection.getBoundingClientRect();
+      // top = rect.top;
+      // bottom = rect.bottom;
+      // if (
+      //   (this.activeSection !== "contact" && top === 0) ||
+      //   bottom >= window.innerHeight
+      // ) {
+      //   this.activeSection = "contact";
+      //   return;
+      // }
+      // if (this.activeSection === undefined) {
+      //   this.activeSection = "home";
+      //   return;
+      // }
     },
     toggleMenuIcon: function () {
       this.menuExpanded = this.menuExpanded ? false : true;
