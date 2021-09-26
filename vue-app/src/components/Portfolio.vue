@@ -1,6 +1,5 @@
 <template>
   <div id="portfolio-container" class="section">
-    <PortfolioModal v-if="modalItem" />
     <!-- Inspired by the Personal template -->
     <div id="portfolio">
       <div id="portfolio-header-container">
@@ -17,7 +16,9 @@
           <option v-for="tag in tags" :value="tag" :key="tag">{{ tag }}</option>
         </select>
       </div>
-      <transition-group id="portfolio-tiles-container" name="fade" tag="div">
+      <!-- Will work on transitions later on after MVP is proven -->
+      <!-- <transition-group id="portfolio-tiles-container" name="fade" tag="div"> -->
+      <div id="portfolio-tiles-container">
         <div
           v-for="item in activeItems"
           v-bind:key="item.id"
@@ -28,18 +29,15 @@
             {{ item.title }}
           </h4>
         </div>
-      </transition-group>
+      </div>
+      <!-- </transition-group> -->
     </div>
   </div>
 </template>
 
 <script>
-import PortfolioModal from "./PortfolioModal.vue";
 export default {
   name: "Portfolio",
-  components: {
-    PortfolioModal,
-  },
   data() {
     return {
       showModal: false,
@@ -271,9 +269,7 @@ export default {
       });
     },
     openModal(item) {
-      console.log("item is", item);
-      this.modalItem = item;
-      this.showModal = true;
+      this.$emit("activePortfolioItem", item);
     },
   },
   mounted() {
