@@ -12,8 +12,9 @@
       <Services />
       <Resume />
       <Portfolio @activePortfolioItem="activeItem = $event" />
-      <Blog />
-      <Contact />
+      <!-- The blog and contact sections will be populated once the blog backend is built in my next project -->
+      <!-- <Blog />
+      <Contact /> -->
       <Footer />
     </div>
   </div>
@@ -21,8 +22,8 @@
 
 <script>
 import About from "./components/About.vue";
-import Blog from "./components/Blog.vue";
-import Contact from "./components/Contact.vue";
+// import Blog from "./components/Blog.vue";
+// import Contact from "./components/Contact.vue";
 import Footer from "./components/Footer.vue";
 import Hero from "./components/Hero.vue";
 import Navbar from "./components/Navbar.vue";
@@ -35,8 +36,8 @@ export default {
   name: "Cody Uhi's Portfolio",
   components: {
     About,
-    Blog,
-    Contact,
+    // Blog,
+    // Contact,
     Footer,
     Hero,
     Navbar,
