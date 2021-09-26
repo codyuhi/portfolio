@@ -366,16 +366,17 @@ export default {
   -webkit-transition: background-color 500ms ease-in-out;
   -ms-transition: background-color 500ms ease-in-out;
   transition: background-color 500ms ease-in-out;
+  background-color: var(--darkest);
   z-index: 3;
 }
 .opaque-background {
   background-color: var(--darkest);
 }
 .opaque-menu-icon > div > span {
-  background: var(--light) !important;
+  background: var(--lightest) !important;
 }
 .about-menu-icon > div > span {
-  background: var(--light) !important;
+  background: var(--lightest) !important;
 }
 .active,
 .active > i {
