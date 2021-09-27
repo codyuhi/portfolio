@@ -69,6 +69,7 @@ export default {
         {
           id: "1",
           title: "Portfolio Website",
+          client: "Personal",
           link: "https://codyuhi.github.io",
           codeLink: "https://github.com/codyuhi/portfolio",
           imgUrl: require("@/assets/portfolio.png"),
@@ -80,7 +81,8 @@ export default {
         {
           id: "2",
           title: "Blog Website",
-          link: "https://blog.codyuhi.me",
+          client: "Personal",
+          link: "https://blog2.codyuhi.me",
           codeLink: "https://github.com/codyuhi/blog",
           imgUrl: require("@/assets/blog.png"),
           tags: [
@@ -100,9 +102,10 @@ export default {
         {
           id: "3",
           title: "Online Market",
+          client: "Brigham Young University - College of Engineering",
           link: null,
           codeLink: "https://github.com/codyuhi/online-market",
-          imgUrl: null,
+          imgUrl: require("@/assets/online-marketplace.png"),
           tags: [
             "Mobile Frontend",
             "Web Backend",
@@ -118,6 +121,7 @@ export default {
         {
           id: "4",
           title: "Family Map",
+          client: "Brigham Young University - College of Mathematics",
           link: null,
           codeLink: "https://github.com/codyuhi/family-map",
           imgUrl: require("@/assets/family-map.png"),
@@ -129,9 +133,10 @@ export default {
         {
           id: "5",
           title: "Net-App",
+          client: "Brigham Young University - College of Engineering",
           link: null,
           codeLink: "https://github.com/codyuhi/net-app",
-          imgUrl: "",
+          imgUrl: require("@/assets/net-app.jpg"),
           tags: [
             "Web Frontend",
             "Web Backend",
@@ -150,29 +155,34 @@ export default {
         {
           id: "6",
           title: "Game Deals",
+          client: "Brigham Young University - College of Engineering",
           link: "https://games.codyuhi.me/",
           codeLink: "https://github.com/codyuhi/game-deals",
-          imgUrl: "",
+          imgUrl: require("@/assets/game-deals.png"),
           tags: ["Web Frontend", "VueJS", "HTML", "CSS", "JavaScript"],
-          date: "",
-          description: "",
+          date: "April, 2021",
+          description:
+            "A frontend web application built with VueJS that uses the publicly available CheapShark RESTful API.  This application allows users to search for games to determine what the cheapest price for the game is across many online vendors' websites.",
         },
         {
           id: "7",
           title: "Quality Of Life",
+          client: "Brigham Young University - College of Mathematics",
           link: "https://quality.codyuhi.me",
           codeLink: "https://github.com/codyuhi/quality-of-life",
-          imgUrl: "",
+          imgUrl: require("@/assets/quality-of-life.png"),
           tags: ["Web Frontend", "HTML", "CSS", "JavaScript"],
-          date: "",
-          description: "",
+          date: "January, 2021",
+          description:
+            "A frontend web application built with vanilla JS, HTML, and CSS that uses the publicly available Teleport RESTful API.  This application allows users to gain information regarding any city's quality of life in order to compare ratings and determine which city they would most like to relocate to.",
         },
         {
           id: "8",
           title: "Kashti 2.0",
-          link: null,
+          client: "Microsoft",
+          link: "https://brigade.sh/",
           codeLink: "https://github.com/codyuhi/kashti-uhi",
-          imgUrl: "",
+          imgUrl: require("@/assets/kashti.png"),
           tags: [
             "Web Frontend",
             "AngularJS",
@@ -182,78 +192,100 @@ export default {
             "CSS",
             "JavaScript",
           ],
-          date: "",
-          description: "",
+          date: "April, 2021",
+          description:
+            "A frontend web UI built with Angular that uses the Microsoft-sponsored open-source Brigade platform.  Brigade is a event-driven scripting platform for Kubernetes that allows users to tie arbitrary events with desired tasks. This project was sponsored by Microsoft.",
         },
         {
           id: "9",
           title: "Weather",
+          client: "Brigham Young University - College of Mathematics",
           link: "https://weather.codyuhi.me",
           codeLink: "https://github.com/codyuhi/weather",
-          imgUrl: "",
+          imgUrl: require("@/assets/weather.png"),
           tags: ["Web Frontend", "HTML", "CSS", "JavaScript"],
-          date: "",
-          description: "",
+          date: "January, 2021",
+          description:
+            "A frontend web application built with vanilla JS, HTML, and CSS that uses the publicly available OpenWeatherMap API.  This application allows users to search the name of a city and view the current weather/forecast for that city.",
         },
         {
           id: "10",
           title: "Desk Setup",
+          client: "Brigham Young University - College of Mathematics",
           link: "https://desk.codyuhi.me",
           codeLink: "https://github.com/codyuhi/desk-setup",
-          imgUrl: "",
+          imgUrl: require("@/assets/desk.png"),
           tags: ["Web Frontend", "HTML", "CSS", "JavaScript"],
-          date: "",
-          description: "",
+          date: "January, 2021",
+          description:
+            "A frontend web application built with vanilla JS, HTML, and CSS.  This application is an exhibition of my web design and frontend coding capabilities.",
         },
         {
           id: "11",
           title: "Uhi Photo Spot",
+          client: "Brigham Young University - College of Mathematics",
           link: "http://codyuhi.me/",
           codeLink: "https://github.com/codyuhi/uhi-photo-spot",
-          imgUrl: "",
+          imgUrl: require("@/assets/photos.png"),
           tags: ["Web Frontend", "HTML", "CSS", "JavaScript"],
-          date: "",
-          description: "",
+          date: "January, 2021",
+          description:
+            "A frontend web application built with vanilla JS, HTML, and CSS.  This application exhibits some of the best artistic photos that I've taken.",
         },
         {
           id: "12",
           title: "Pokedex",
+          client: "Brigham Young University - College of Engineering",
           link: null,
           codeLink: "https://github.com/codyuhi/pokedex",
-          imgUrl: "",
+          imgUrl: require("@/assets/pokedex.jpg"),
           tags: ["Mobile Frontend", "Java"],
-          date: "",
-          description: "",
+          date: "August, 2020",
+          description:
+            "A frontend mobile application built with Java that uses the publicly available PokeAPI RESTful API, Google Cloud Vision, and the Asana RESTful API.  This application allows you to search for any pokemon and get basic stats about the pokemon.  The application also allows users to scan the name of a Pokemon with their phone's camera to pull up its Pokedex entry.",
         },
         {
           id: "13",
           title: "Detect Deepfake",
+          client: "Utah State University - Data Science Program",
           link: null,
           codeLink: "https://github.com/codyuhi/hackusu",
-          imgUrl: "",
-          tags: ["Machine Learning", "Python3", "TensorFlow"],
-          date: "",
-          description: "",
+          imgUrl: require("@/assets/detect-deepfake.png"),
+          tags: [
+            "Machine Learning",
+            "Python3",
+            "TensorFlow",
+            "HTML",
+            "CSS",
+            "JavaScript",
+          ],
+          date: "November, 2020",
+          description:
+            "A full-stack web application built with vanilla JS, HTML, CSS, Python, and Tensorflow.  This application allows users to upload an image to determine if the image was generated using deep fake AI.  The application won the Data Science category at Utah State University's HackUSU 2020 hackathon.",
         },
         {
           id: "14",
           title: "Whereabouts",
+          client: "University of Utah - School of Computing",
           link: null,
           codeLink: "https://github.com/codyuhi/whereabouts",
-          imgUrl: "",
+          imgUrl: require("@/assets/whereabouts.jpg"),
           tags: ["Mobile Frontend", "Java"],
-          date: "",
-          description: "",
+          date: "September, 2020",
+          description:
+            "A frontend mobile application built with Java and Google's Vision API. This application allows users to point their camera at any text and the text will automatically pull up the text in Google maps or in a browser if the text is determined to be a physical or web address.",
         },
         {
           id: "15",
           title: "Eureka Trail",
+          client: "Brigham Young University - College of Engineering",
           link: "https://theeurekatrail.com/",
           codeLink: null,
-          imgUrl: "",
-          tags: ["Mobile Frontend", "Flutter"],
-          date: "",
-          description: "",
+          imgUrl: require("@/assets/eureka-trail.png"),
+          tags: ["Mobile Frontend", "Flutter", "PostgreSQL"],
+          date: "December, 2020",
+          description:
+            "A full-stack mobile application built with Flutter, Firebase, Python, and PostgreSQL.  This application gamifies fitness by tracking a user's walking activity and providing incentives for users to meet walking milestones.",
         },
       ],
     };
@@ -360,11 +392,10 @@ option:hover {
   width: 400px;
   height: 250px;
   max-width: 85vw;
-  border: 1px solid var(--light);
   border-radius: 1.5%;
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .portfolio-tile:hover {
   cursor: pointer;

@@ -21,7 +21,8 @@
               <span class="bold">Project date: </span> {{ item.date }}
             </p>
             <p v-if="item.link">
-              <span class="bold">Project URL: </span> {{ item.link }}
+              <span class="bold">Project URL: </span>
+              <a :href="item.link">{{ item.link }}</a>
             </p>
             <p v-if="item.codeLink">
               <span class="bold">Code URL: </span>

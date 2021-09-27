@@ -130,9 +130,9 @@
                       ><i class="fa fa-pencil-square-o"></i> Blog</a
                     >
                   </li> -->
-                  <!-- <li>
+                  <li>
                     <a
-                      href="#contact-container"
+                      href="#footer-container"
                       v-bind:class="
                         activeSection === 'contact'
                           ? 'active nav-item'
@@ -141,7 +141,7 @@
                       v-on:click="toggleMenuIcon()"
                       ><i class="fa fa-paper-plane-o"></i> Contact</a
                     >
-                  </li> -->
+                  </li>
                 </ul>
               </nav>
             </div>
@@ -160,7 +160,15 @@
       id="desktop-navbar"
       v-bind:class="activeSection !== 'home' ? 'opaque-background' : ''"
     >
-      <h1><a href="#hero-container">CodeUhi</a></h1>
+      <h1>
+        <a href="#hero-container"
+          ><img
+            src="../assets/android-chrome-192x192.png"
+            class="navbar-icon-img"
+          /> 
+          &nbsp;CodeUhi</a
+        >
+      </h1>
       <nav>
         <ul>
           <li>
@@ -223,16 +231,16 @@
               >Blog</a
             >
           </li> -->
-          <!-- <li>
+          <li>
             <a
               id="contact-link"
-              href="#contact-container"
+              href="#footer-container"
               v-bind:class="
                 activeSection === 'contact' ? 'active nav-item' : 'nav-item'
               "
               >Contact</a
             >
-          </li> -->
+          </li>
         </ul>
       </nav>
     </div>
@@ -315,16 +323,16 @@ export default {
       //   this.activeSection = "blog";
       //   return;
       // }
-      // rect = this.contactSection.getBoundingClientRect();
-      // top = rect.top;
-      // bottom = rect.bottom;
-      // if (
-      //   (this.activeSection !== "contact" && top === 0) ||
-      //   bottom >= window.innerHeight
-      // ) {
-      //   this.activeSection = "contact";
-      //   return;
-      // }
+      rect = this.contactSection.getBoundingClientRect();
+      top = rect.top;
+      bottom = rect.bottom;
+      if (
+        (this.activeSection !== "contact" && top === 0) ||
+        bottom >= window.innerHeight
+      ) {
+        this.activeSection = "contact";
+        return;
+      }
       // if (this.activeSection === undefined) {
       //   this.activeSection = "home";
       //   return;
@@ -345,7 +353,7 @@ export default {
     this.resumeSection = document.querySelector("#resume-container");
     this.portfolioSection = document.querySelector("#portfolio-container");
     this.blogSection = document.querySelector("#blog-container");
-    this.contactSection = document.querySelector("#contact-container");
+    this.contactSection = document.querySelector("#footer-container");
     this.setActiveSection();
     window.addEventListener("scroll", this.setActiveSection);
   },
@@ -388,6 +396,10 @@ a {
 }
 #desktop-navbar {
   display: none;
+}
+.navbar-icon-img {
+  width: 30px;
+  height: auto;
 }
 #mobile-navbar {
   display: flex;
