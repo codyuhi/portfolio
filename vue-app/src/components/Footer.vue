@@ -35,7 +35,7 @@ export default {
 <style scoped>
 #footer-container {
   width: 100vw;
-  background-color: var(--darkest);
+  background-color: var(--lightest);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,7 +47,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  color: var(--lightest);
+  color: var(--darkest);
   text-align: center;
 }
 #footer-icons-container {
@@ -63,7 +63,7 @@ export default {
 }
 #footer-icons > a > i {
   font-size: 20px;
-  color: var(--light);
+  color: var(--dark);
   margin: 10px;
 }
 </style>

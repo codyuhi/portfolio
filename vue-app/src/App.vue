@@ -2,11 +2,16 @@
   <div id="content-container">
     <div id="content">
       <Navbar />
+      <PortfolioModal
+        v-if="activeItem"
+        :item="activeItem"
+        @destroyModal="activeItem = $event"
+      />
       <Hero />
       <About />
       <Services />
       <Resume />
-      <Portfolio />
+      <Portfolio @activePortfolioItem="activeItem = $event" />
       <!-- The blog and contact sections will be populated once the blog backend is built in my next project -->
       <!-- <Blog />
       <Contact /> -->
@@ -23,6 +28,7 @@ import Footer from "./components/Footer.vue";
 import Hero from "./components/Hero.vue";
 import Navbar from "./components/Navbar.vue";
 import Portfolio from "./components/Portfolio.vue";
+import PortfolioModal from "./components/PortfolioModal.vue";
 import Resume from "./components/Resume.vue";
 import Services from "./components/Services.vue";
 
@@ -36,8 +42,19 @@ export default {
     Hero,
     Navbar,
     Portfolio,
+    PortfolioModal,
     Resume,
     Services,
+  },
+  data() {
+    return {
+      activeItem: null,
+    };
+  },
+  methods: {
+    setActiveItem() {
+      console.log("this.activeItem is", this.activeItem);
+    },
   },
 };
 </script>

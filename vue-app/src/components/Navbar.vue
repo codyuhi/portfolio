@@ -118,7 +118,7 @@
                       ><i class="fa fa-file-code-o"></i> Portfolio</a
                     >
                   </li>
-                  <li>
+                  <!-- <li>
                     <a
                       href="#blog-container"
                       v-bind:class="
@@ -129,10 +129,10 @@
                       v-on:click="toggleMenuIcon()"
                       ><i class="fa fa-pencil-square-o"></i> Blog</a
                     >
-                  </li>
+                  </li> -->
                   <li>
                     <a
-                      href="#contact-container"
+                      href="#footer-container"
                       v-bind:class="
                         activeSection === 'contact'
                           ? 'active nav-item'
@@ -160,7 +160,15 @@
       id="desktop-navbar"
       v-bind:class="activeSection !== 'home' ? 'opaque-background' : ''"
     >
-      <h1><a href="#hero-container">CodeUhi</a></h1>
+      <h1>
+        <a href="#hero-container"
+          ><img
+            src="../assets/android-chrome-192x192.png"
+            class="navbar-icon-img"
+          /> 
+          &nbsp;CodeUhi</a
+        >
+      </h1>
       <nav>
         <ul>
           <li>
@@ -213,7 +221,7 @@
               >Portfolio</a
             >
           </li>
-          <li>
+          <!-- <li>
             <a
               id="blog-link"
               href="#blog-container"
@@ -222,11 +230,11 @@
               "
               >Blog</a
             >
-          </li>
+          </li> -->
           <li>
             <a
               id="contact-link"
-              href="#contact-container"
+              href="#footer-container"
               v-bind:class="
                 activeSection === 'contact' ? 'active nav-item' : 'nav-item'
               "
@@ -305,16 +313,16 @@ export default {
         this.activeSection = "portfolio";
         return;
       }
-      rect = this.blogSection.getBoundingClientRect();
-      top = rect.top;
-      bottom = rect.bottom;
-      if (
-        (this.activeSection !== "blog" && top === 0) ||
-        bottom >= window.innerHeight
-      ) {
-        this.activeSection = "blog";
-        return;
-      }
+      // rect = this.blogSection.getBoundingClientRect();
+      // top = rect.top;
+      // bottom = rect.bottom;
+      // if (
+      //   (this.activeSection !== "blog" && top === 0) ||
+      //   bottom >= window.innerHeight
+      // ) {
+      //   this.activeSection = "blog";
+      //   return;
+      // }
       rect = this.contactSection.getBoundingClientRect();
       top = rect.top;
       bottom = rect.bottom;
@@ -325,10 +333,10 @@ export default {
         this.activeSection = "contact";
         return;
       }
-      if (this.activeSection === undefined) {
-        this.activeSection = "home";
-        return;
-      }
+      // if (this.activeSection === undefined) {
+      //   this.activeSection = "home";
+      //   return;
+      // }
     },
     toggleMenuIcon: function () {
       this.menuExpanded = this.menuExpanded ? false : true;
@@ -345,7 +353,7 @@ export default {
     this.resumeSection = document.querySelector("#resume-container");
     this.portfolioSection = document.querySelector("#portfolio-container");
     this.blogSection = document.querySelector("#blog-container");
-    this.contactSection = document.querySelector("#contact-container");
+    this.contactSection = document.querySelector("#footer-container");
     this.setActiveSection();
     window.addEventListener("scroll", this.setActiveSection);
   },
@@ -366,16 +374,17 @@ export default {
   -webkit-transition: background-color 500ms ease-in-out;
   -ms-transition: background-color 500ms ease-in-out;
   transition: background-color 500ms ease-in-out;
+  background-color: var(--darkest);
   z-index: 3;
 }
 .opaque-background {
   background-color: var(--darkest);
 }
 .opaque-menu-icon > div > span {
-  background: var(--light) !important;
+  background: var(--lightest) !important;
 }
 .about-menu-icon > div > span {
-  background: var(--light) !important;
+  background: var(--lightest) !important;
 }
 .active,
 .active > i {
@@ -387,6 +396,10 @@ a {
 }
 #desktop-navbar {
   display: none;
+}
+.navbar-icon-img {
+  width: 30px;
+  height: auto;
 }
 #mobile-navbar {
   display: flex;

@@ -397,7 +397,7 @@ a {
 @media only screen and (min-width: 1030px) {
   #resume-container {
     margin: 0 75px 75px 75px;
-    padding: 100px 0 70px 0;
+    padding: 100px 0 0 0;
   }
   #resume {
     max-width: 1370px;
@@ -419,6 +419,30 @@ a {
     width: 38vw;
     min-width: 475px;
     max-width: 680px;
+  }
+}
+@media only screen and (min-width: 1300px) and (max-width: 1499px) {
+  #resume-container {
+    margin: 0 75px 50px 75px;
+  }
+  #resume-section-container-holder {
+    height: 1900px;
+  }
+}
+@media only screen and (min-width: 1500px) and (max-width: 1599px) {
+  #resume-container {
+    margin: 0 75px 25px 75px;
+  }
+  #resume-section-container-holder {
+    height: 1950px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  #resume-container {
+    margin: 0 75px 0 75px;
+  }
+  #resume-section-container-holder {
+    height: 1850px;
   }
 }
 </style>
