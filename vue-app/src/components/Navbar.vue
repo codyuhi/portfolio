@@ -165,7 +165,7 @@
           ><img
             src="../assets/android-chrome-192x192.png"
             class="navbar-icon-img"
-          /> 
+          />
           &nbsp;CodeUhi</a
         >
       </h1>
