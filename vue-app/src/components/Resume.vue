@@ -6,7 +6,7 @@
         <h2>Comprehensive Resume</h2>
         <hr />
         <a
-          href="https://github.com/codyuhi/career-development/raw/master/Cody%20Uhi%20Resume%20Spring%202021.pdf"
+          href="https://github.com/codyuhi/career-development/raw/master/Cody%20Uhi%20Resume%20Fall%202021.pdf"
           >Click Here</a
         >
         to download a concise version of my resume.
