@@ -168,13 +168,13 @@ export default {
           id: "7",
           title: "Quality Of Life",
           client: "Brigham Young University - College of Mathematics",
-          // link: "https://quality.codyuhi.me",
+          link: "https://quality.codyuhi.me",
           codeLink: "https://github.com/codyuhi/quality-of-life",
           imgUrl: require("@/assets/quality-of-life.png"),
-          tags: ["Web Frontend", "HTML", "CSS", "JavaScript"],
+          tags: ["Web Frontend", "HTML", "CSS", "JavaScript", "React"],
           date: "January, 2021",
           description:
-            "A frontend web application built with vanilla JS, HTML, and CSS that uses the publicly available Teleport RESTful API.  This application allows users to gain information regarding any city's quality of life in order to compare ratings and determine which city they would most like to relocate to.",
+            "A frontend web application built in React that uses the publicly available Teleport RESTful API.  This application allows users to gain information regarding any city's quality of life in order to compare ratings and determine which city they would most like to relocate to.  This application has a React version and a HTML, CSS, and JS version.",
         },
         {
           id: "8",
