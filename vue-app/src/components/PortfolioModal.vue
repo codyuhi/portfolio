@@ -12,7 +12,12 @@
             </p>
             <p v-if="item.tags.length > 0">
               <span class="bold">Categories: </span>
-              <span v-for="tag in item.tags" :key="tag">{{ tag }}, </span>
+              <span v-for="(tag, index) in item.tags" :key="tag"
+                >{{ tag
+                }}<span v-if="index != Object.keys(item.tags).length - 1"
+                  >,
+                </span></span
+              >
             </p>
             <p v-if="item.client">
               <span class="bold">Client: </span> {{ item.client }}

@@ -60,7 +60,7 @@ export default {
               endTime: null,
               location: "Lehi, UT",
               summary:
-                "Innovative and driven Software Engineer with 4+ years of experience developing user-centered technological solutions from initial concept to final, polished deliverable.",
+                "Innovative and driven Software Engineer with 4+ years of experience developing user-centered technological solutions from initial concept to a final, polished deliverable.",
               bullets: [
                 {
                   id: "sum1",
@@ -85,7 +85,7 @@ export default {
               endTime: "Present",
               location: "Vivint Smart Home - Lehi, UT",
               summary:
-                "Site Reliability Engineering (SRE) combines software and systems engineering to build and run large-scale, massively distributed, fault-tolerant systems. SRE ensures that a company's services have reliability, uptime appropriate to users' needs and a fast rate of improvement. Additionally SRE’s will keep an ever-watchful eye on our systems capacity and performance. Much of an SRE's software development focuses on optimizing existing systems, building infrastructure and eliminating work through automation.",
+                "Site Reliability Engineering (SRE) combines software and systems engineering to build and run large-scale, massively distributed, fault-tolerant systems. SRE ensures that a company's services have reliability, uptime appropriate to users' needs, and a fast rate of improvement. Additionally SRE’s will keep an ever-watchful eye on the capacity and performance of our system. Much of an SRE's software development focuses on optimizing existing systems, building infrastructure, and eliminating work through automation.",
               bullets: [
                 {
                   id: "sre1",
@@ -105,7 +105,7 @@ export default {
                 {
                   id: "sre4",
                   value:
-                    "Utilize system & state management tools such as Salt, Chef, and Puppet to administor over 700 virtual machines",
+                    "Utilize system & state management tools such as Salt, Chef, and Puppet to administer over 700 virtual machines",
                 },
               ],
             },
@@ -119,7 +119,7 @@ export default {
               bullets: [
                 {
                   id: "25u1",
-                  value: "Maintain radio and data distrbution systems",
+                  value: "Maintain radio and data distribution systems",
                 },
                 {
                   id: "25u2",
@@ -149,7 +149,7 @@ export default {
               endTime: "2021",
               location: "Brigham Young University - Provo, UT",
               summary:
-                "The IT program at BYU is among the leading programs in the nation, with faculty who have helped define this exciting and growing field. BYU students take a range of experiential learning courses emphasizing technical excellence, hands-on experience, and problem solving in a rigorous, yet intimate and collegial atmosphere.",
+                "The IT program at BYU is among the leading programs in the nation, with faculty who have helped define this exciting and growing field. BYU students take a range of experiential learning courses emphasizing technical excellence, hands-on experience, and problem-solving in a rigorous, yet intimate and collegial atmosphere.",
               bullets: [
                 {
                   id: "edu1",
@@ -307,7 +307,7 @@ export default {
                 {
                   id: "cyb2",
                   value:
-                    "Perform cyber analysis, technical research and investigations for digital signatures, web technologies, and social media",
+                    "Perform cyber analysis, technical research, and investigations for digital signatures, web technologies, and social media",
                 },
               ],
             },
