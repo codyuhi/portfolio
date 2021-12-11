@@ -64,10 +64,33 @@ export default {
         "VueJS",
         "Web Backend",
         "Web Frontend",
+        "ReactJS",
+        "MySQL",
       ],
       portfolioItems: [
         {
           id: "1",
+          title: "Anime Threes List",
+          client: "Personal",
+          // link: "https://threes.codyuhi.me",
+          codeLink: "https://github.com/codyuhi/threes",
+          imgUrl: require("@/assets/threes.png"),
+          tags: [
+            "Web Frontend",
+            "Web Backend",
+            "ReactJS",
+            "Python3",
+            "MySQL",
+            "HTML",
+            "CSS",
+            "JavaScript",
+          ],
+          date: "December, 2021",
+          description:
+            "A full-stack web application built with ReactJS, Python3/Flask, and MySQL that gives users the ability to showcase their tastes in Anime in an easy-to-digest 3x3 grid.  Users can login, create lists, export those lists, and share lists with friends from their profile.",
+        },
+        {
+          id: "2",
           title: "Portfolio Website",
           client: "Personal",
           link: "https://codyuhi.github.io",
@@ -79,7 +102,19 @@ export default {
             "A frontend web application built in VueJS that is used to showcase my personal projects and work experience.  The portfolio features my UI design and photo editing work as well as my frontend word development.",
         },
         {
-          id: "2",
+          id: "3",
+          title: "Quality Of Life",
+          client: "Brigham Young University - College of Mathematics",
+          link: "https://quality.codyuhi.me",
+          codeLink: "https://github.com/codyuhi/quality-of-life",
+          imgUrl: require("@/assets/quality-of-life.png"),
+          tags: ["Web Frontend", "HTML", "CSS", "JavaScript", "ReactJS"],
+          date: "January, 2021",
+          description:
+            "A frontend web application built in React that uses the publicly available Teleport RESTful API.  This application allows users to gain information regarding any city's quality of life in order to compare ratings and determine which city they would most like to relocate to.  This application has a React version and a HTML, CSS, and JS version.",
+        },
+        {
+          id: "4",
           title: "Blog Website",
           client: "Personal",
           // link: "https://blog2.codyuhi.me",
@@ -100,7 +135,7 @@ export default {
             "A full-stack web application built in VueJS and NodeJS that is used to archive my thoughts and things I've learned in my day-to-day life.  It uses MongoDB to store blog post data and renders those client-side dynamically based on the data taken from the backend.",
         },
         {
-          id: "3",
+          id: "5",
           title: "Online Market",
           client: "Brigham Young University - College of Engineering",
           link: null,
@@ -119,7 +154,7 @@ export default {
             "A full-stack mobile application built with NodeJS on the backend and Java on the frontend.  This application allows users to create, edit, purchase, and delete items on an online marketplace.",
         },
         {
-          id: "4",
+          id: "6",
           title: "Family Map",
           client: "Brigham Young University - College of Mathematics",
           link: null,
@@ -131,7 +166,7 @@ export default {
             "A full-stack mobile application built with Java on both the frontend and the backend.  This application allows users to track their family history on a map of the world, marking locations of where the users' ancestors had significant life events (such as birth, marriage, and death).",
         },
         {
-          id: "5",
+          id: "7",
           title: "Net-App",
           client: "Brigham Young University - College of Engineering",
           link: null,
@@ -153,7 +188,7 @@ export default {
             "A full-stack web application built with VueJS on the frontend and NodeJS on the backend.  This application allows a user to track professional networking interactions with other people and companies. It can be used to help someone on a job search to fully leverage their networking resources to land a job at a desirable company.",
         },
         {
-          id: "6",
+          id: "8",
           title: "Game Deals",
           client: "Brigham Young University - College of Engineering",
           // link: "https://games.codyuhi.me/",
@@ -165,19 +200,7 @@ export default {
             "A frontend web application built with VueJS that uses the publicly available CheapShark RESTful API.  This application allows users to search for games to determine what the cheapest price for the game is across many online vendors' websites.",
         },
         {
-          id: "7",
-          title: "Quality Of Life",
-          client: "Brigham Young University - College of Mathematics",
-          link: "https://quality.codyuhi.me",
-          codeLink: "https://github.com/codyuhi/quality-of-life",
-          imgUrl: require("@/assets/quality-of-life.png"),
-          tags: ["Web Frontend", "HTML", "CSS", "JavaScript", "React"],
-          date: "January, 2021",
-          description:
-            "A frontend web application built in React that uses the publicly available Teleport RESTful API.  This application allows users to gain information regarding any city's quality of life in order to compare ratings and determine which city they would most like to relocate to.  This application has a React version and a HTML, CSS, and JS version.",
-        },
-        {
-          id: "8",
+          id: "9",
           title: "Kashti 2.0",
           client: "Microsoft",
           link: "https://brigade.sh/",
@@ -197,7 +220,7 @@ export default {
             "A frontend web UI built with Angular that uses the Microsoft-sponsored open-source Brigade platform.  Brigade is a event-driven scripting platform for Kubernetes that allows users to tie arbitrary events with desired tasks. This project was sponsored by Microsoft.",
         },
         {
-          id: "9",
+          id: "10",
           title: "Weather",
           client: "Brigham Young University - College of Mathematics",
           // link: "https://weather.codyuhi.me",
@@ -209,7 +232,7 @@ export default {
             "A frontend web application built with vanilla JS, HTML, and CSS that uses the publicly available OpenWeatherMap API.  This application allows users to search the name of a city and view the current weather/forecast for that city.",
         },
         {
-          id: "10",
+          id: "11",
           title: "Desk Setup",
           client: "Brigham Young University - College of Mathematics",
           // link: "https://desk.codyuhi.me",
@@ -221,7 +244,7 @@ export default {
             "A frontend web application built with vanilla JS, HTML, and CSS.  This application is an exhibition of my web design and frontend coding capabilities.",
         },
         {
-          id: "11",
+          id: "12",
           title: "Uhi Photo Spot",
           client: "Brigham Young University - College of Mathematics",
           // link: "http://codyuhi.me/",
@@ -233,7 +256,7 @@ export default {
             "A frontend web application built with vanilla JS, HTML, and CSS.  This application exhibits some of the best artistic photos that I've taken.",
         },
         {
-          id: "12",
+          id: "13",
           title: "Pokedex",
           client: "Brigham Young University - College of Engineering",
           link: null,
@@ -245,7 +268,7 @@ export default {
             "A frontend mobile application built with Java that uses the publicly available PokeAPI RESTful API, Google Cloud Vision, and the Asana RESTful API.  This application allows you to search for any pokemon and get basic stats about the pokemon.  The application also allows users to scan the name of a Pokemon with their phone's camera to pull up its Pokedex entry.",
         },
         {
-          id: "13",
+          id: "14",
           title: "Detect Deepfake",
           client: "Utah State University - Data Science Program",
           link: null,
@@ -264,7 +287,7 @@ export default {
             "A full-stack web application built with vanilla JS, HTML, CSS, Python, and Tensorflow.  This application allows users to upload an image to determine if the image was generated using deep fake AI.  The application won the Data Science category at Utah State University's HackUSU 2020 hackathon.",
         },
         {
-          id: "14",
+          id: "15",
           title: "Whereabouts",
           client: "University of Utah - School of Computing",
           link: null,
@@ -276,7 +299,7 @@ export default {
             "A frontend mobile application built with Java and Google's Vision API. This application allows users to point their camera at any text and the text will automatically pull up the text in Google maps or in a browser if the text is determined to be a physical or web address.",
         },
         {
-          id: "15",
+          id: "16",
           title: "Eureka Trail",
           client: "Brigham Young University - College of Engineering",
           link: "https://theeurekatrail.com/",

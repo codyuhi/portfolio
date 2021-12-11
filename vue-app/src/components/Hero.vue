@@ -219,6 +219,9 @@ h1 {
 
 /* Desktop View */
 @media only screen and (min-width: 1012px) {
+  #hero-container {
+    background-image: none;
+  }
   #hero {
     background-image: url("../assets/suit.png");
     background-repeat: no-repeat;
