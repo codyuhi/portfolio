@@ -8,15 +8,15 @@
           <a href="https://twitter.com/CodeUhi"
             ><i class="fa fa-twitter"></i
           ></a>
-          <a href="https://www.facebook.com/cody.uhi"
+          <!-- <a href="https://www.facebook.com/cody.uhi"
             ><i class="fa fa-facebook"></i
-          ></a>
+          ></a> -->
           <a href="https://www.linkedin.com/in/codyuhi/"
             ><i class="fa fa-linkedin"></i
           ></a>
-          <a href="https://www.instagram.com/uhicody/"
+          <!-- <a href="https://www.instagram.com/uhicody/"
             ><i class="fa fa-instagram"></i
-          ></a>
+          ></a> -->
           <a href="https://github.com/codyuhi"><i class="fa fa-github"></i></a>
         </div>
       </div>
