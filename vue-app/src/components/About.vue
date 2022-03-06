@@ -39,7 +39,7 @@
               </p>
               <p>
                 <i class="fa fa-angle-right"></i>
-                <strong>Company:</strong> Vivint (Lehi, UT)
+                <strong>Company:</strong> Activision Blizzard
               </p>
               <p>
                 <i class="fa fa-angle-right"></i>
