@@ -187,7 +187,6 @@ h1 {
     background-size: contain;
     background-position-x: 100%;
     background-position-y: 100%;
-    max-width: 100vw;
   }
   #hero {
     flex-direction: row;
