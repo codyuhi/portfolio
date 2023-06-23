@@ -1,91 +1,83 @@
-<script setup>
-import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
-</script>
-
 <template>
-  <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="@/assets/logo.svg"
-      width="125"
-      height="125"
-    />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+  <div id="content-container">
+    <div id="content">
+      <Navbar />
+      <PortfolioModal
+        v-if="activeItem"
+        :item="activeItem"
+        @destroyModal="activeItem = $event"
+      />
+      <Hero />
+      <About />
+      <Services />
+      <Resume />
+      <Portfolio @activePortfolioItem="activeItem = $event" />
+      <!-- The blog and contact sections will be populated once the blog backend is built in my next project -->
+      <!-- <Blog />
+      <Contact /> -->
+      <Footer />
     </div>
-  </header>
-
-  <RouterView />
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+<script>
+import About from "./components/About.vue";
+// import Blog from "./components/Blog.vue";
+// import Contact from "./components/Contact.vue";
+import Footer from "./components/Footer.vue";
+import Hero from "./components/Hero.vue";
+import Navbar from "./components/Navbar.vue";
+import Portfolio from "./components/Portfolio.vue";
+import PortfolioModal from "./components/PortfolioModal.vue";
+import Resume from "./components/Resume.vue";
+import Services from "./components/Services.vue";
+
+export default {
+  name: "cody-uhis-portfolio",
+  components: {
+    About,
+    // Blog,
+    // Contact,
+    Footer,
+    Hero,
+    Navbar,
+    Portfolio,
+    PortfolioModal,
+    Resume,
+    Services,
+  },
+  data() {
+    return {
+      activeItem: null,
+    };
+  },
+  methods: {
+    setActiveItem() {
+      console.log("this.activeItem is", this.activeItem);
+    },
+  },
+};
+</script>
+
+<style>
+* {
+  --lightest: white;
+  --light: lightgreen;
+  --neutral: lightslategray;
+  --dark: lightcoral;
+  --darkest: black;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  scroll-behavior: smooth;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+.section {
+  max-width: 100%;
+  padding: 150px 0 150px 0;
+  color: var(--lightest);
 }
 </style>
