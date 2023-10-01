@@ -39,11 +39,11 @@
               </p>
               <p>
                 <i class="fa fa-angle-right"></i>
-                <strong>Company:</strong> Activision Blizzard
+                <strong>Company:</strong> TikTok Inc.
               </p>
               <p>
                 <i class="fa fa-angle-right"></i>
-                <strong>Location:</strong> Lehi, UT - USA
+                <strong>Location:</strong> Bellevue, WA - USA
               </p>
             </div>
             <div class="about-grid-column">
@@ -56,9 +56,6 @@
                 <strong>Position:</strong> Site Reliability Engineer
               </p>
               <p id="about-icons">
-                <a href="https://twitter.com/CodeUhi"
-                  ><i class="fa fa-twitter"></i
-                ></a>
                 <!-- <a href="https://www.facebook.com/cody.uhi"
                     ><i class="fa fa-facebook"></i
                   ></a> -->
