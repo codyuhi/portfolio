@@ -5,9 +5,6 @@
       <h2>- Contact Me On Social Media -</h2>
       <div id="footer-icons-container">
         <div id="footer-icons">
-          <a href="https://twitter.com/CodeUhi"
-            ><i class="fa fa-twitter"></i
-          ></a>
           <!-- <a href="https://www.facebook.com/cody.uhi"
               ><i class="fa fa-facebook"></i
             ></a> -->
@@ -21,7 +18,7 @@
         </div>
       </div>
       <p>&copy; Copyright Cody Uhi</p>
-      <p>2022年3月</p>
+      <p>2023年10月</p>
     </div>
   </div>
 </template>

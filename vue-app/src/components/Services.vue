@@ -115,11 +115,11 @@ export default {
             },
             {
               id: "ci2",
-              value: "Source Control & Code Flow (Git, Jenkins)",
+              value: "Source Control & Code Flow (Git, ArgoCD, Jenkins)",
             },
             {
               id: "ci3",
-              value: "Automating via Scripting (Salt, Python, Bash)",
+              value: "Automating via Scripting (Python, Bash, Ansible)",
             },
           ],
           icon: "code-fork",

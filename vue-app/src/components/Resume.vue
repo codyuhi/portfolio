@@ -46,7 +46,7 @@
             </div>
           </div>
           <div class="resume-section" id="resume-img-container">
-            <img src="../assets/activision-blizzard.png" id="resume-img" />
+            <img src="../assets/tiktok.jpeg" id="resume-img" />
           </div>
         </div>
         <div class="resume-column">
@@ -91,12 +91,12 @@ export default {
               {
                 id: "sum1",
                 value:
-                  "TypeScript/JavaScript (Vue, Angular, React, NodeJS), Python (LinkedIn Certified), Java, C++ (LinkedIn Certified), Flutter",
+                  "Python (LinkedIn Certified), Bash, TypeScript/JavaScript (Vue, Angular, React, NodeJS), Java, C++ (LinkedIn Certified), Flutter",
               },
               {
                 id: "sum2",
                 value:
-                  "Docker, Kubernetes, Jenkins, ArgoCD, AWS (LinkedIn Certified), Azure, GCP, TensorFlow, Windows AD, Linux, VMWare, Git, SalesForce, Jira, Selenium, Mocha & Chai, Salt",
+                  "Docker, Kubernetes, Jenkins, ArgoCD, Ansible, AWS (LinkedIn Certified), Azure, GCP, TensorFlow, Windows AD, Linux, VMWare, Git, SalesForce, Jira, Selenium, Mocha & Chai, Salt",
               },
             ],
           },
@@ -107,42 +107,38 @@ export default {
         items: [
           {
             name: "Site Reliability Engineer",
-            startTime: "2022",
+            startTime: "2023",
             endTime: "Present",
-            location: "Activision Blizzard - Irvine, CA",
+            location: "TikTok Inc. - Bellevue, WA",
             summary:
-              "Site Reliability Engineering (SRE) combines software and systems engineering to build and run large-scale, massively distributed, fault-tolerant systems. SRE ensures that a company's services have reliability, uptime appropriate to users' needs, and a fast rate of improvement. Additionally SRE’s will keep an ever-watchful eye on the capacity and performance of our system. Much of an SRE's software development focuses on optimizing existing systems, building infrastructure, and eliminating work through automation.",
+              "As an Edge Site Reliability Engineer, manage a variety of complex systems at scale, including systems that administer hyperscale datacenters and public cloud, global content distribution networks (CDNs) and load balancers that handle Tbps of traffic. Collaborate with various teams to translate business needs into concrete action items, and improvements in system design or procedures",
             bullets: [
               {
-                id: "bsre1",
+                id: "tsre1",
                 value:
-                  "Be an integral part of the team modernizing the Battle.net Online Platform",
+                  "Build data pipelines, tools, automations, visualizations and monitors to facilitate the operation and optimization of edge services",
               },
               {
-                id: "bsre2",
+                id: "tsre2",
                 value:
-                  "Participate in on-call rotation with other members of the Site Reliability Engineering team",
+                  "Data monitoring and alerting, data quality assurance and anomaly detection",
               },
               {
                 id: "bsre3",
                 value:
-                  "Provide guidance as well as hands-on support for designing, building, and supporting the development pipeline",
+                  "Document team processes and policies, including methods of engagement and SLOs",
               },
               {
                 id: "bsre4",
-                value: "Automate infrastructure and operations",
+                value: "Analyze, design and implement solutions at the system level to remove bottlenecks and improve edge service performance",
               },
               {
                 id: "bsre5",
-                value: "Create telemetry for monitoring",
+                value: "Implement monitoring and alerting to improve issue detection and response",
               },
               {
                 id: "bsre6",
-                value: "Engineer for high reliability",
-              },
-              {
-                id: "bsre7",
-                value: "Evangelize engineering best practices",
+                value: "Work in a fast-paced environment. Participate in technical operations and rotations in response to performance and reliability issues",
               },
             ],
           },
@@ -193,6 +189,47 @@ export default {
       previousWorkExperience: {
         title: "Previous Work Experience",
         items: [
+        {
+            name: "Site Reliability Engineer",
+            startTime: "2022",
+            endTime: "Present",
+            location: "Activision Blizzard - Irvine, CA",
+            summary:
+              "Site Reliability Engineering (SRE) combines software and systems engineering to build and run large-scale, massively distributed, fault-tolerant systems. SRE ensures that a company's services have reliability, uptime appropriate to users' needs, and a fast rate of improvement. Additionally SRE’s will keep an ever-watchful eye on the capacity and performance of our system. Much of an SRE's software development focuses on optimizing existing systems, building infrastructure, and eliminating work through automation.",
+            bullets: [
+              {
+                id: "bsre1",
+                value:
+                  "Be an integral part of the team modernizing the Battle.net Online Platform",
+              },
+              {
+                id: "bsre2",
+                value:
+                  "Participate in on-call rotation with other members of the Site Reliability Engineering team",
+              },
+              {
+                id: "bsre3",
+                value:
+                  "Provide guidance as well as hands-on support for designing, building, and supporting the development pipeline",
+              },
+              {
+                id: "bsre4",
+                value: "Automate infrastructure and operations",
+              },
+              {
+                id: "bsre5",
+                value: "Create telemetry for monitoring",
+              },
+              {
+                id: "bsre6",
+                value: "Engineer for high reliability",
+              },
+              {
+                id: "bsre7",
+                value: "Evangelize engineering best practices",
+              },
+            ],
+          },
           {
             name: "Site Reliability Engineer",
             startTime: "2021",
@@ -405,11 +442,11 @@ a {
 #resume-img-container {
   display: none;
   justify-content: center;
-  align-items: flex-start;
-  margin: 15px;
+  align-items: center;
+  margin: 15px 20px;
 }
 #resume-img {
-  width: 90%;
+  width: 70%;
   max-width: 800px;
   height: auto;
 }

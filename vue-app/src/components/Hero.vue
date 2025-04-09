@@ -12,9 +12,6 @@
           <p>Site Reliability Engineer</p>
           <p>Full-Stack Software Engineer</p>
           <div id="hero-icons-container">
-            <a href="https://twitter.com/CodeUhi"
-              ><i class="fa fa-twitter"></i
-            ></a>
             <!-- <a href="https://www.facebook.com/cody.uhi"
                 ><i class="fa fa-facebook"></i
               ></a> -->
