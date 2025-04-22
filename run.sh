@@ -1,8 +1,8 @@
 #!/bin/zsh
 
-docker build --tag 'cody-portfolio' .
+docker build --tag 'portfolio' .
 
-docker run -p 80:80 --detach 'cody-portfolio'
+docker run -p 80:80 --detach 'portfolio'
 
 open http://localhost:80
 
