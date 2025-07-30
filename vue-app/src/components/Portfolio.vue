@@ -74,7 +74,7 @@ export default {
           client: "Personal",
           // link: "https://threes.codyuhi.me",
           codeLink: "https://github.com/codyuhi/threes",
-          imgUrl: this.getImageUrl("/src/assets/threes.png"),
+          imgUrl: this.getImageUrl("../assets/threes.png"),
           tags: [
             "Web Frontend",
             "Web Backend",
@@ -95,7 +95,7 @@ export default {
           client: "Personal",
           link: "https://codyuhi.github.io",
           codeLink: "https://github.com/codyuhi/portfolio",
-          imgUrl: this.getImageUrl("/src/assets/portfolio.png"),
+          imgUrl: this.getImageUrl("../assets/portfolio.png"),
           tags: ["Web Frontend", "VueJS", "HTML", "CSS", "JavaScript"],
           date: "September, 2021",
           description:
@@ -107,7 +107,7 @@ export default {
           client: "Brigham Young University - College of Mathematics",
           link: "https://quality.codyuhi.me",
           codeLink: "https://github.com/codyuhi/quality-of-life",
-          imgUrl: this.getImageUrl("/src/assets/quality-of-life.png"),
+          imgUrl: this.getImageUrl("../assets/quality-of-life.png"),
           tags: ["Web Frontend", "HTML", "CSS", "JavaScript", "ReactJS"],
           date: "January, 2021",
           description:
@@ -119,7 +119,7 @@ export default {
           client: "Personal",
           // link: "https://blog2.codyuhi.me",
           codeLink: "https://github.com/codyuhi/blog",
-          imgUrl: this.getImageUrl("/src/assets/blog.png"),
+          imgUrl: this.getImageUrl("../assets/blog.png"),
           tags: [
             "Web Frontend",
             "Web Backend",
@@ -140,7 +140,7 @@ export default {
           client: "Brigham Young University - College of Engineering",
           link: null,
           codeLink: "https://github.com/codyuhi/online-market",
-          imgUrl: this.getImageUrl("/src/assets/online-marketplace.png"),
+          imgUrl: this.getImageUrl("../assets/online-marketplace.png"),
           tags: [
             "Mobile Frontend",
             "Web Backend",
@@ -159,7 +159,7 @@ export default {
           client: "Brigham Young University - College of Mathematics",
           link: null,
           codeLink: "https://github.com/codyuhi/family-map",
-          imgUrl: this.getImageUrl("/src/assets/family-map.png"),
+          imgUrl: this.getImageUrl("../assets/family-map.png"),
           tags: ["Mobile Frontend", "Web Backend", "Java", "SQLite"],
           date: "August, 2020",
           description:
@@ -171,7 +171,7 @@ export default {
           client: "Brigham Young University - College of Engineering",
           link: null,
           codeLink: "https://github.com/codyuhi/net-app",
-          imgUrl: this.getImageUrl("/src/assets/net-app.jpg"),
+          imgUrl: this.getImageUrl("../assets/net-app.jpg"),
           tags: [
             "Web Frontend",
             "Web Backend",
@@ -193,7 +193,7 @@ export default {
           client: "Brigham Young University - College of Engineering",
           // link: "https://games.codyuhi.me/",
           codeLink: "https://github.com/codyuhi/game-deals",
-          imgUrl: this.getImageUrl("/src/assets/game-deals.png"),
+          imgUrl: this.getImageUrl("../assets/game-deals.png"),
           tags: ["Web Frontend", "VueJS", "HTML", "CSS", "JavaScript"],
           date: "April, 2021",
           description:
@@ -205,7 +205,7 @@ export default {
           client: "Microsoft",
           link: "https://brigade.sh/",
           codeLink: "https://github.com/codyuhi/kashti-uhi",
-          imgUrl: this.getImageUrl("/src/assets/kashti.png"),
+          imgUrl: this.getImageUrl("../assets/kashti.png"),
           tags: [
             "Web Frontend",
             "AngularJS",
@@ -225,7 +225,7 @@ export default {
           client: "Brigham Young University - College of Mathematics",
           // link: "https://weather.codyuhi.me",
           codeLink: "https://github.com/codyuhi/weather",
-          imgUrl: this.getImageUrl("/src/assets/weather.png"),
+          imgUrl: this.getImageUrl("../assets/weather.png"),
           tags: ["Web Frontend", "HTML", "CSS", "JavaScript"],
           date: "January, 2021",
           description:
@@ -237,7 +237,7 @@ export default {
           client: "Brigham Young University - College of Mathematics",
           // link: "https://desk.codyuhi.me",
           codeLink: "https://github.com/codyuhi/desk-setup",
-          imgUrl: this.getImageUrl("/src/assets/desk.png"),
+          imgUrl: this.getImageUrl("../assets/desk.png"),
           tags: ["Web Frontend", "HTML", "CSS", "JavaScript"],
           date: "January, 2021",
           description:
@@ -249,7 +249,7 @@ export default {
           client: "Brigham Young University - College of Mathematics",
           // link: "http://codyuhi.me/",
           codeLink: "https://github.com/codyuhi/uhi-photo-spot",
-          imgUrl: this.getImageUrl("/src/assets/photos.png"),
+          imgUrl: this.getImageUrl("../assets/photos.png"),
           tags: ["Web Frontend", "HTML", "CSS", "JavaScript"],
           date: "January, 2021",
           description:
@@ -261,7 +261,7 @@ export default {
           client: "Brigham Young University - College of Engineering",
           link: null,
           codeLink: "https://github.com/codyuhi/pokedex",
-          imgUrl: this.getImageUrl("/src/assets/pokedex.jpg"),
+          imgUrl: this.getImageUrl("../assets/pokedex.jpg"),
           tags: ["Mobile Frontend", "Java"],
           date: "August, 2020",
           description:
@@ -273,7 +273,7 @@ export default {
           client: "Utah State University - Data Science Program",
           link: null,
           codeLink: "https://github.com/codyuhi/hackusu",
-          imgUrl: this.getImageUrl("/src/assets/detect-deepfake.png"),
+          imgUrl: this.getImageUrl("../assets/detect-deepfake.png"),
           tags: [
             "Machine Learning",
             "Python3",
@@ -292,7 +292,7 @@ export default {
           client: "University of Utah - School of Computing",
           link: null,
           codeLink: "https://github.com/codyuhi/whereabouts",
-          imgUrl: this.getImageUrl("/src/assets/whereabouts.jpg"),
+          imgUrl: this.getImageUrl("../assets/whereabouts.jpg"),
           tags: ["Mobile Frontend", "Java"],
           date: "September, 2020",
           description:
@@ -304,7 +304,7 @@ export default {
           client: "Brigham Young University - College of Engineering",
           link: "https://theeurekatrail.com/",
           codeLink: null,
-          imgUrl: this.getImageUrl("/src/assets/eureka-trail.png"),
+          imgUrl: this.getImageUrl("../assets/eureka-trail.png"),
           tags: ["Mobile Frontend", "Flutter", "PostgreSQL"],
           date: "December, 2020",
           description:

@@ -1,5 +1,5 @@
 # Build stage
-FROM node:18 AS builder
+FROM node:22.12.0 AS builder
 WORKDIR /app
 COPY ./vue-app /app
 RUN yarn add vite \
