@@ -60,12 +60,20 @@ export default {
 </script>
 
 <style>
-* {
+:root {
   --lightest: white;
   --light: lightgreen;
   --neutral: lightslategray;
   --dark: lightcoral;
   --darkest: black;
+
+  --sat: env(safe-area-inset-top, 0px);
+  --sar: env(safe-area-inset-right, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -75,9 +83,31 @@ export default {
   scroll-behavior: smooth;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  background-color: var(--darkest);
+}
+
+#content-container,
+#content {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .section {
   max-width: 100%;
-  padding: 150px 0 150px 0;
+  width: 100%;
+  padding: 70px 0;
   color: var(--lightest);
+}
+
+@media only screen and (min-width: 768px) {
+  .section {
+    padding: 120px 0;
+  }
 }
 </style>

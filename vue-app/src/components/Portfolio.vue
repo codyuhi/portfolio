@@ -347,8 +347,10 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 75px 0 75px 0;
+  padding: 50px 1.25rem;
   background-color: var(--darkest);
+  width: 100%;
+  max-width: 100%;
 }
 #portfolio {
   color: var(--lightest);
@@ -356,14 +358,16 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 75px;
-  width: 100vw;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1370px;
 }
 #portfolio-header-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 25px;
 }
 #portfolio-header {
   display: flex;
@@ -371,7 +375,7 @@ export default {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 0 0 0 15px;
+  gap: 0.5rem;
 }
 hr {
   margin: 15px 10px 15px 10px;
@@ -380,19 +384,23 @@ hr {
   width: 150px;
 }
 h2 {
-  font-size: 35px;
-  margin: 0 0 15px 0;
+  font-size: clamp(1.85rem, 5vw, 35px);
+  margin: 0;
 }
 #portfolio-header-container > p {
-  font-size: 20px;
+  font-size: clamp(1rem, 3vw, 20px);
   margin-bottom: 10px;
 }
 select {
   color: var(--light);
   background-color: var(--darkest);
-  border: none;
-  border-bottom: 1px solid var(--light);
-  margin: 0 0 15px 15px;
+  border: 1px solid var(--light);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 16px;
+  min-height: 44px;
+  touch-action: manipulation;
+  margin: 0;
 }
 option {
   color: var(--darkest);
@@ -409,24 +417,32 @@ option:hover {
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
+  gap: 1.25rem;
 }
 .portfolio-tile {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 15px;
-  margin: 15px;
-  width: 400px;
-  height: 250px;
-  max-width: 85vw;
-  border-radius: 1.5%;
+  margin: 0;
+  width: 380px;
+  height: 240px;
+  max-width: 100%;
+  border-radius: 12px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  touch-action: manipulation;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .portfolio-tile:hover {
   cursor: pointer;
   backdrop-filter: blur(4px);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+.portfolio-tile:active {
+  transform: scale(0.98);
 }
 .portfolio-tile:hover > h4.portfolio-tile-title {
   font-size: 20px;

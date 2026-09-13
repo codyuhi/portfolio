@@ -396,11 +396,14 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 50px 50px 50px;
-  padding: 75px 0 75px 0;
+  margin: 0;
+  padding: 50px 1.25rem;
+  width: 100%;
+  max-width: 100%;
 }
 #resume {
-  width: 100vw;
+  width: 100%;
+  max-width: 1370px;
   color: var(--darkest);
 }
 #resume-header-container {
@@ -416,10 +419,10 @@ export default {
   flex: 1;
 }
 h2 {
-  font-size: 35px;
+  font-size: clamp(1.85rem, 5vw, 35px);
 }
 h3 {
-  font-size: 26px;
+  font-size: clamp(1.3rem, 4vw, 26px);
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -432,12 +435,14 @@ hr {
 a {
   text-decoration: none;
   color: var(--dark);
+  min-height: 44px;
 }
 .resume-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  margin-bottom: 20px;
 }
 #resume-img-container {
   display: none;
@@ -449,10 +454,18 @@ a {
   width: 70%;
   max-width: 800px;
   height: auto;
+  border-radius: 12px;
+}
+@media only screen and (min-width: 800px) {
+  #resume-container {
+    margin: 0 auto;
+    padding: 90px 2.5rem;
+  }
 }
 @media only screen and (min-width: 1030px) {
   #resume-column-container {
     flex-direction: row;
+    gap: 2rem;
   }
   #resume-img-container {
     display: flex;

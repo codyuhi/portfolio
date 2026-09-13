@@ -93,11 +93,14 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 50px 50px 50px;
-  padding: 75px 0 75px 0;
+  margin: 0;
+  padding: 50px 1.25rem;
+  width: 100%;
+  max-width: 100%;
 }
 #about {
-  width: 100vw;
+  width: 100%;
+  max-width: 1370px;
   color: var(--darkest);
 }
 #about-header-container,
@@ -105,13 +108,13 @@ export default {
 #about-title,
 #about-description,
 #about-grid-container {
-  margin: 0 0 25px 0;
+  margin: 0 0 20px 0;
 }
 h2 {
-  font-size: 35px;
+  font-size: clamp(1.85rem, 5vw, 35px);
 }
 i {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
   margin: 5px;
   color: var(--dark);
@@ -128,21 +131,31 @@ hr {
   align-items: center;
 }
 #about-img {
-  width: 60vw;
+  width: 100%;
+  max-width: 400px;
   height: auto;
-  margin-bottom: 25px;
-  max-width: 730px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+#about-icons > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  touch-action: manipulation;
 }
 
 #about-icons > a > i {
-  margin: 10px 20px 0 0;
+  margin: 5px 15px 0 0;
 }
 
 /* Desktop view */
 @media only screen and (min-width: 800px) {
   #about-container {
-    margin: 0 75px 75px 75px;
-    padding: 100px 0 70px 0;
+    margin: 0 auto;
+    padding: 90px 2.5rem;
   }
   #about {
     max-width: 1370px;
@@ -160,6 +173,7 @@ hr {
   }
   #about-img {
     width: 35vw;
+    max-width: 500px;
   }
   #about-stats {
     margin: 0 0 0 25px;

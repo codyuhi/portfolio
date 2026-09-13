@@ -83,22 +83,26 @@ export default {
 
 .modal {
   background: var(--lightest);
-  box-shadow: 2px 2px 20px 1px;
-  overflow-x: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  overflow-x: hidden;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding: 50px;
+  padding: 1.25rem;
   position: relative;
-  max-width: 95vw;
-  max-height: 95vh;
+  max-width: 92vw;
+  max-height: 88dvh;
+  border-radius: 16px;
+  gap: 1.5rem;
 }
 
 .modal > img,
 .modal > div {
   flex: 1;
+  min-width: min(100%, 300px);
 }
 
 .bold {
@@ -113,35 +117,53 @@ hr {
 }
 
 .modal-stats {
-  padding: 30px;
-  box-shadow: 0 0 30px rgb(69 80 91 / 8%);
-  margin-bottom: 30px;
+  padding: 1.25rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  margin-bottom: 1.25rem;
 }
 
 .modal-stats > p {
-  margin: 15px 0 15px 0;
+  margin: 10px 0;
+  word-break: break-word;
 }
 
 .modal-description > h2 {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
+  font-size: clamp(1.4rem, 4vw, 24px);
 }
 
 a {
   color: var(--dark);
   font-weight: bold;
+  word-break: break-all;
 }
 
 .btn-close {
   position: absolute;
-  top: 5px;
-  right: 15px;
+  top: 10px;
+  right: 10px;
   border: none;
   font-size: 20px;
-  padding: 10px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
   cursor: pointer;
   font-weight: bold;
-  color: var(--dark);
-  background: transparent;
+  color: var(--darkest);
+  background: rgba(0, 0, 0, 0.06);
+  touch-action: manipulation;
+  z-index: 10;
+}
+
+.btn-close:active {
+  background: rgba(0, 0, 0, 0.15);
 }
 
 .modal-img {

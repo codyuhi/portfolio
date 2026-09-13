@@ -24,6 +24,11 @@
         </div>
       </div>
       <div
+        v-if="menuExpanded"
+        class="sidebar-backdrop"
+        v-on:click="toggleMenuIcon()"
+      ></div>
+      <div
         id="sidebar-container"
         v-bind:class="menuExpanded ? 'open' : closed ? 'closed' : ''"
       >
@@ -407,31 +412,43 @@ a {
 #mobile-nav-button-container {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  margin-right: 25px;
-  z-index: 4;
+  position: fixed;
+  top: max(14px, var(--sat));
+  right: max(16px, var(--sar));
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  z-index: 120;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  touch-action: manipulation;
 }
 #mobile-nav-button {
   display: flex;
   flex-direction: column;
-  width: 25px;
-  height: 25px;
-  margin: 25px auto;
+  width: 22px;
+  height: 20px;
+  margin: 0;
+  position: relative;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -o-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
   cursor: pointer;
 }
 #mobile-nav-button span {
   display: block;
   position: absolute;
-  height: 4px;
+  height: 3px;
   width: 100%;
   background: var(--lightest);
   border-radius: 3px;
@@ -451,13 +468,13 @@ a {
 }
 #mobile-nav-button span:nth-child(2),
 #mobile-nav-button span:nth-child(3) {
-  top: 10px;
+  top: 8px;
 }
 #mobile-nav-button span:nth-child(4) {
-  top: 20px;
+  top: 16px;
 }
 #mobile-nav-button.open span:nth-child(1) {
-  top: 18px;
+  top: 8px;
   width: 0%;
   left: 50%;
 }
@@ -474,49 +491,50 @@ a {
   transform: rotate(-45deg);
 }
 #mobile-nav-button.open span:nth-child(4) {
-  top: 18px;
+  top: 8px;
   width: 0%;
   left: 50%;
 }
+
+.sidebar-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 105;
+}
+
 #sidebar-container {
   display: none;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   background-color: var(--darkest);
-  width: 35vw;
-  min-width: 250px;
+  width: min(85vw, 300px);
   height: 100vh;
-  z-index: 3;
+  height: 100dvh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 110;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.7);
+  padding-top: max(20px, var(--sat));
+  padding-bottom: max(20px, var(--sab));
 }
 #sidebar-container.open {
   display: flex;
-  position: absolute;
-  left: 0px;
-  top: 0;
-  -webkit-animation: slideIn 0.35s forwards;
-  -moz-animation: slideIn 0.35s forwards;
-  animation: slideIn 0.35s forwards;
-}
-@-webkit-keyframes slideIn {
-  0% {
-    transform: translateX(-900px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@-moz-keyframes slideIn {
-  0% {
-    transform: translateX(-900px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+  transform: translateX(0);
+  animation: slideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 @keyframes slideIn {
   0% {
-    transform: translateX(-900px);
+    transform: translateX(-100%);
   }
   100% {
     transform: translateX(0);
@@ -524,35 +542,14 @@ a {
 }
 #sidebar-container.closed {
   display: flex;
-  position: absolute;
-  left: -900px;
-  top: 0;
-  -webkit-animation: slideOut 0.5s forwards;
-  -moz-animation: slideOut 0.5s forwards;
-  animation: slideOut 0.5s forwards;
-}
-@-webkit-keyframes slideOut {
-  0% {
-    transform: translateX(900px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@-moz-keyframes slideOut {
-  0% {
-    transform: translateX(900px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+  animation: slideOut 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 @keyframes slideOut {
   0% {
-    transform: translateX(900px);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(-100%);
   }
 }
 #sidebar {
